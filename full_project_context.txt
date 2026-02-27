@@ -1,0 +1,2504 @@
+./configs/config.yaml:server:
+./configs/config.yaml:  port: 8080
+./configs/config.yaml:  read_timeout: 10s
+./configs/config.yaml:  write_timeout: 10s
+./configs/config.yaml:  cors_allowed_origins:
+./configs/config.yaml:    - "*"
+./configs/config.yaml:    - "http://localhost:5173"
+./configs/config.yaml:
+./configs/config.yaml:database:
+./configs/config.yaml:  host: "localhost"
+./configs/config.yaml:  port: 3306
+./configs/config.yaml:  user: "luna_user"
+./configs/config.yaml:  password: "luna_password"
+./configs/config.yaml:  dbname: "luna_tasks"
+./configs/config.yaml:  max_open_conns: 25
+./configs/config.yaml:  max_idle_conns: 5
+./configs/config.yaml:  conn_max_lifetime: 5m
+./configs/config.yaml:
+./configs/config.yaml:redis:
+./configs/config.yaml:  host: "localhost"
+./configs/config.yaml:  port: 6379
+./configs/config.yaml:  password: ""
+./configs/config.yaml:  db: 0
+./configs/config.yaml:
+./configs/config.yaml:auth:
+./configs/config.yaml:  public_key_path: "./certs/public.pem"
+./configs/config.yaml:  private_key_path: "./certs/private.pem"
+./configs/config.yaml:  access_token_ttl: 15m
+./configs/config.yaml:  refresh_token_ttl: 168h # 7 дней
+./configs/config.yaml:
+./configs/config.yaml:rate_limit:
+./configs/config.yaml:  requests_per_minute: 100
+./configs/config.yaml:  burst: 100
+./configs/config.yaml:
+./configs/config.yaml:metrics:
+./configs/config.yaml:  enabled: true
+./configs/config.yaml:  port: 9090
+./go.mod:module github.com/xela07ax/luna-tasks-sbs
+./go.mod:
+./go.mod:go 1.25
+./go.mod:
+./go.mod:require (
+./go.mod:	github.com/go-chi/chi/v5 v5.2.5
+./go.mod:	github.com/go-sql-driver/mysql v1.9.3
+./go.mod:	github.com/golang-jwt/jwt/v5 v5.3.1
+./go.mod:	github.com/jmoiron/sqlx v1.4.0
+./go.mod:	github.com/prometheus/client_golang v1.23.2
+./go.mod:	github.com/redis/go-redis/v9 v9.18.0
+./go.mod:	github.com/spf13/viper v1.21.0
+./go.mod:	github.com/stretchr/testify v1.11.1
+./go.mod:	github.com/testcontainers/testcontainers-go v0.40.0
+./go.mod:	github.com/testcontainers/testcontainers-go/modules/mysql v0.40.0
+./go.mod:	github.com/testcontainers/testcontainers-go/modules/redis v0.40.0
+./go.mod:	go.uber.org/zap v1.27.1
+./go.mod:	golang.org/x/crypto v0.48.0
+./go.mod:	golang.org/x/time v0.14.0
+./go.mod:)
+./go.mod:
+./go.mod:require (
+./go.mod:	dario.cat/mergo v1.0.2 // indirect
+./go.mod:	filippo.io/edwards25519 v1.1.0 // indirect
+./go.mod:	github.com/Azure/go-ansiterm v0.0.0-20210617225240-d185dfc1b5a1 // indirect
+./go.mod:	github.com/Microsoft/go-winio v0.6.2 // indirect
+./go.mod:	github.com/beorn7/perks v1.0.1 // indirect
+./go.mod:	github.com/cenkalti/backoff/v4 v4.3.0 // indirect
+./go.mod:	github.com/cespare/xxhash/v2 v2.3.0 // indirect
+./go.mod:	github.com/containerd/errdefs v1.0.0 // indirect
+./go.mod:	github.com/containerd/errdefs/pkg v0.3.0 // indirect
+./go.mod:	github.com/containerd/log v0.1.0 // indirect
+./go.mod:	github.com/containerd/platforms v0.2.1 // indirect
+./go.mod:	github.com/cpuguy83/dockercfg v0.3.2 // indirect
+./go.mod:	github.com/davecgh/go-spew v1.1.1 // indirect
+./go.mod:	github.com/dgryski/go-rendezvous v0.0.0-20200823014737-9f7001d12a5f // indirect
+./go.mod:	github.com/distribution/reference v0.6.0 // indirect
+./go.mod:	github.com/docker/docker v28.5.1+incompatible // indirect
+./go.mod:	github.com/docker/go-connections v0.6.0 // indirect
+./go.mod:	github.com/docker/go-units v0.5.0 // indirect
+./go.mod:	github.com/ebitengine/purego v0.8.4 // indirect
+./go.mod:	github.com/felixge/httpsnoop v1.0.4 // indirect
+./go.mod:	github.com/fsnotify/fsnotify v1.9.0 // indirect
+./go.mod:	github.com/go-logr/logr v1.4.3 // indirect
+./go.mod:	github.com/go-logr/stdr v1.2.2 // indirect
+./go.mod:	github.com/go-ole/go-ole v1.2.6 // indirect
+./go.mod:	github.com/go-viper/mapstructure/v2 v2.4.0 // indirect
+./go.mod:	github.com/google/uuid v1.6.0 // indirect
+./go.mod:	github.com/grpc-ecosystem/grpc-gateway/v2 v2.28.0 // indirect
+./go.mod:	github.com/klauspost/compress v1.18.0 // indirect
+./go.mod:	github.com/lufia/plan9stats v0.0.0-20211012122336-39d0f177ccd0 // indirect
+./go.mod:	github.com/magiconair/properties v1.8.10 // indirect
+./go.mod:	github.com/mdelapenya/tlscert v0.2.0 // indirect
+./go.mod:	github.com/moby/docker-image-spec v1.3.1 // indirect
+./go.mod:	github.com/moby/go-archive v0.1.0 // indirect
+./go.mod:	github.com/moby/patternmatcher v0.6.0 // indirect
+./go.mod:	github.com/moby/sys/sequential v0.6.0 // indirect
+./go.mod:	github.com/moby/sys/user v0.4.0 // indirect
+./go.mod:	github.com/moby/sys/userns v0.1.0 // indirect
+./go.mod:	github.com/moby/term v0.5.0 // indirect
+./go.mod:	github.com/morikuni/aec v1.0.0 // indirect
+./go.mod:	github.com/munnerz/goautoneg v0.0.0-20191010083416-a7dc8b61c822 // indirect
+./go.mod:	github.com/opencontainers/go-digest v1.0.0 // indirect
+./go.mod:	github.com/opencontainers/image-spec v1.1.1 // indirect
+./go.mod:	github.com/pelletier/go-toml/v2 v2.2.4 // indirect
+./go.mod:	github.com/pkg/errors v0.9.1 // indirect
+./go.mod:	github.com/pmezard/go-difflib v1.0.0 // indirect
+./go.mod:	github.com/power-devops/perfstat v0.0.0-20210106213030-5aafc221ea8c // indirect
+./go.mod:	github.com/prometheus/client_model v0.6.2 // indirect
+./go.mod:	github.com/prometheus/common v0.66.1 // indirect
+./go.mod:	github.com/prometheus/procfs v0.16.1 // indirect
+./go.mod:	github.com/sagikazarmark/locafero v0.11.0 // indirect
+./go.mod:	github.com/shirou/gopsutil/v4 v4.25.6 // indirect
+./go.mod:	github.com/sirupsen/logrus v1.9.3 // indirect
+./go.mod:	github.com/sourcegraph/conc v0.3.1-0.20240121214520-5f936abd7ae8 // indirect
+./go.mod:	github.com/spf13/afero v1.15.0 // indirect
+./go.mod:	github.com/spf13/cast v1.10.0 // indirect
+./go.mod:	github.com/spf13/pflag v1.0.10 // indirect
+./go.mod:	github.com/stretchr/objx v0.5.2 // indirect
+./go.mod:	github.com/subosito/gotenv v1.6.0 // indirect
+./go.mod:	github.com/tklauser/go-sysconf v0.3.12 // indirect
+./go.mod:	github.com/tklauser/numcpus v0.6.1 // indirect
+./go.mod:	github.com/yusufpapurcu/wmi v1.2.4 // indirect
+./go.mod:	go.opentelemetry.io/auto/sdk v1.2.1 // indirect
+./go.mod:	go.opentelemetry.io/contrib/instrumentation/net/http/otelhttp v0.49.0 // indirect
+./go.mod:	go.opentelemetry.io/otel v1.39.0 // indirect
+./go.mod:	go.opentelemetry.io/otel/metric v1.39.0 // indirect
+./go.mod:	go.opentelemetry.io/otel/sdk v1.39.0 // indirect
+./go.mod:	go.opentelemetry.io/otel/trace v1.39.0 // indirect
+./go.mod:	go.uber.org/atomic v1.11.0 // indirect
+./go.mod:	go.uber.org/multierr v1.10.0 // indirect
+./go.mod:	go.yaml.in/yaml/v2 v2.4.2 // indirect
+./go.mod:	go.yaml.in/yaml/v3 v3.0.4 // indirect
+./go.mod:	golang.org/x/sys v0.41.0 // indirect
+./go.mod:	golang.org/x/text v0.34.0 // indirect
+./go.mod:	google.golang.org/grpc v1.79.1 // indirect
+./go.mod:	google.golang.org/protobuf v1.36.11 // indirect
+./go.mod:	gopkg.in/yaml.v3 v3.0.1 // indirect
+./go.mod:)
+./internal/config/config.go:package config
+./internal/config/config.go:
+./internal/config/config.go:import (
+./internal/config/config.go:	"fmt"
+./internal/config/config.go:	"os"
+./internal/config/config.go:	"strings"
+./internal/config/config.go:	"time"
+./internal/config/config.go:
+./internal/config/config.go:	"github.com/spf13/viper"
+./internal/config/config.go:)
+./internal/config/config.go:
+./internal/config/config.go:type Config struct {
+./internal/config/config.go:	Server    ServerConfig    `mapstructure:"server"`
+./internal/config/config.go:	Database  DatabaseConfig  `mapstructure:"database"`
+./internal/config/config.go:	Redis     RedisConfig     `mapstructure:"redis"`
+./internal/config/config.go:	Auth      AuthConfig      `mapstructure:"auth"`
+./internal/config/config.go:	RateLimit RateLimitConfig `mapstructure:"rate_limit"`
+./internal/config/config.go:	Metrics   MetricsConfig   `mapstructure:"metrics"`
+./internal/config/config.go:}
+./internal/config/config.go:
+./internal/config/config.go:type ServerConfig struct {
+./internal/config/config.go:	Port               int           `mapstructure:"port"`
+./internal/config/config.go:	ReadTimeout        time.Duration `mapstructure:"read_timeout"`
+./internal/config/config.go:	WriteTimeout       time.Duration `mapstructure:"write_timeout"`
+./internal/config/config.go:	CorsAllowedOrigins []string      `mapstructure:"cors_allowed_origins"`
+./internal/config/config.go:}
+./internal/config/config.go:
+./internal/config/config.go:type DatabaseConfig struct {
+./internal/config/config.go:	Host            string        `mapstructure:"host"`
+./internal/config/config.go:	Port            int           `mapstructure:"port"`
+./internal/config/config.go:	User            string        `mapstructure:"user"`
+./internal/config/config.go:	Password        string        `mapstructure:"password"`
+./internal/config/config.go:	DBName          string        `mapstructure:"dbname"`
+./internal/config/config.go:	MaxOpenConns    int           `mapstructure:"max_open_conns"`
+./internal/config/config.go:	MaxIdleConns    int           `mapstructure:"max_idle_conns"`
+./internal/config/config.go:	ConnMaxLifetime time.Duration `mapstructure:"conn_max_lifetime"`
+./internal/config/config.go:}
+./internal/config/config.go:
+./internal/config/config.go:type RedisConfig struct {
+./internal/config/config.go:	Host     string `mapstructure:"host"`
+./internal/config/config.go:	Port     int    `mapstructure:"port"`
+./internal/config/config.go:	Password string `mapstructure:"password"`
+./internal/config/config.go:	DB       int    `mapstructure:"db"`
+./internal/config/config.go:}
+./internal/config/config.go:
+./internal/config/config.go:type AuthConfig struct {
+./internal/config/config.go:	PublicKeyPath   string        `mapstructure:"public_key_path"`
+./internal/config/config.go:	PrivateKeyPath  string        `mapstructure:"private_key_path"`
+./internal/config/config.go:	AccessTokenTTL  time.Duration `mapstructure:"access_token_ttl"`
+./internal/config/config.go:	RefreshTokenTTL time.Duration `mapstructure:"refresh_token_ttl"`
+./internal/config/config.go:	PublicKey       []byte
+./internal/config/config.go:	PrivateKey      []byte
+./internal/config/config.go:}
+./internal/config/config.go:
+./internal/config/config.go:type RateLimitConfig struct {
+./internal/config/config.go:	RequestsPerMinute float64 `mapstructure:"requests_per_minute"`
+./internal/config/config.go:	Burst             int     `mapstructure:"burst"`
+./internal/config/config.go:}
+./internal/config/config.go:
+./internal/config/config.go:type MetricsConfig struct {
+./internal/config/config.go:	Enabled bool `mapstructure:"enabled"`
+./internal/config/config.go:	Port    int  `mapstructure:"port"`
+./internal/config/config.go:}
+./internal/config/config.go:
+./internal/config/config.go:func LoadConfig(path string) (*Config, error) {
+./internal/config/config.go:	v := viper.New()
+./internal/config/config.go:
+./internal/config/config.go:	v.SetConfigName("config")
+./internal/config/config.go:	v.SetConfigType("yaml")
+./internal/config/config.go:	v.AddConfigPath(path)
+./internal/config/config.go:	v.AddConfigPath(".")
+./internal/config/config.go:
+./internal/config/config.go:	// Поддержка переменных окружения (например, LUNA_DATABASE_HOST переопределит database.host)
+./internal/config/config.go:	v.SetEnvPrefix("LUNA")
+./internal/config/config.go:	v.AutomaticEnv()
+./internal/config/config.go:	v.SetEnvKeyReplacer(strings.NewReplacer(".", "_"))
+./internal/config/config.go:
+./internal/config/config.go:	// Дефолтные значения
+./internal/config/config.go:	v.SetDefault("server.port", 8080)
+./internal/config/config.go:	v.SetDefault("server.read_timeout", "10s")
+./internal/config/config.go:	v.SetDefault("server.write_timeout", "10s")
+./internal/config/config.go:	v.SetDefault("database.host", "localhost")
+./internal/config/config.go:	v.SetDefault("database.port", 3306)
+./internal/config/config.go:	v.SetDefault("redis.host", "localhost")
+./internal/config/config.go:	v.SetDefault("redis.port", 6379)
+./internal/config/config.go:	v.SetDefault("auth.access_token_ttl", "15m")
+./internal/config/config.go:	v.SetDefault("auth.refresh_token_ttl", "168h")
+./internal/config/config.go:
+./internal/config/config.go:	if err := v.ReadInConfig(); err != nil {
+./internal/config/config.go:		if _, ok := err.(viper.ConfigFileNotFoundError); !ok {
+./internal/config/config.go:			return nil, fmt.Errorf("error reading config file: %w", err)
+./internal/config/config.go:		}
+./internal/config/config.go:		// Если файла нет, работаем на дефолтах и ENV
+./internal/config/config.go:	}
+./internal/config/config.go:
+./internal/config/config.go:	var cfg Config
+./internal/config/config.go:	if err := v.Unmarshal(&cfg); err != nil {
+./internal/config/config.go:		return nil, fmt.Errorf("unable to decode into struct: %w", err)
+./internal/config/config.go:	}
+./internal/config/config.go:
+./internal/config/config.go:	// Загрузка ключей из Файла ИЛИ из ENV
+./internal/config/config.go:	cfg.Auth.PublicKey = loadKeyResource(cfg.Auth.PublicKeyPath, "LUNA_AUTH_PUBLIC_KEY_DATA")
+./internal/config/config.go:	cfg.Auth.PrivateKey = loadKeyResource(cfg.Auth.PrivateKeyPath, "LUNA_AUTH_PRIVATE_KEY_DATA")
+./internal/config/config.go:
+./internal/config/config.go:	return &cfg, nil
+./internal/config/config.go:}
+./internal/config/config.go:
+./internal/config/config.go:// loadKeyResource — читает ключ из ENV (приоритет) или из файла
+./internal/config/config.go:func loadKeyResource(path string, envDataKey string) []byte {
+./internal/config/config.go:	if data := os.Getenv(envDataKey); data != "" {
+./internal/config/config.go:		return []byte(data)
+./internal/config/config.go:	}
+./internal/config/config.go:	if path != "" {
+./internal/config/config.go:		data, err := os.ReadFile(path)
+./internal/config/config.go:		if err == nil {
+./internal/config/config.go:			return data
+./internal/config/config.go:		}
+./internal/config/config.go:	}
+./internal/config/config.go:	return nil
+./internal/config/config.go:}
+./internal/docs/docs.go:package docs
+./internal/docs/docs.go:
+./internal/docs/docs.go:type Field struct {
+./internal/docs/docs.go:	Name        string `json:"name"`
+./internal/docs/docs.go:	Type        string `json:"type"`
+./internal/docs/docs.go:	Description string `json:"description"`
+./internal/docs/docs.go:	Required    bool   `json:"required"`
+./internal/docs/docs.go:}
+./internal/docs/docs.go:
+./internal/docs/docs.go:type Route struct {
+./internal/docs/docs.go:	Method      string  `json:"method"`
+./internal/docs/docs.go:	Path        string  `json:"path"`
+./internal/docs/docs.go:	Description string  `json:"description"`
+./internal/docs/docs.go:	Auth        bool    `json:"auth_required"`
+./internal/docs/docs.go:	Request     []Field `json:"request_payload,omitempty"`
+./internal/docs/docs.go:	Response    string  `json:"response_description"`
+./internal/docs/docs.go:}
+./internal/docs/docs.go:
+./internal/docs/docs.go:type APIDoc struct {
+./internal/docs/docs.go:	Version string  `json:"version"`
+./internal/docs/docs.go:	Title   string  `json:"title"`
+./internal/docs/docs.go:	Routes  []Route `json:"routes"`
+./internal/docs/docs.go:}
+./internal/docs/docs.go:
+./internal/docs/docs.go:func GetAPIDocs() APIDoc {
+./internal/docs/docs.go:	return APIDoc{
+./internal/docs/docs.go:		Version: "1.0.0",
+./internal/docs/docs.go:		Title:   "Luna Tasks API",
+./internal/docs/docs.go:		Routes: []Route{
+./internal/docs/docs.go:			{
+./internal/docs/docs.go:				Method:      "POST",
+./internal/docs/docs.go:				Path:        "/api/v1/register",
+./internal/docs/docs.go:				Description: "Регистрация нового пользователя",
+./internal/docs/docs.go:				Auth:        false,
+./internal/docs/docs.go:				Request: []Field{
+./internal/docs/docs.go:					{Name: "email", Type: "string", Description: "Email пользователя", Required: true},
+./internal/docs/docs.go:					{Name: "username", Type: "string", Description: "Уникальное имя пользователя", Required: true},
+./internal/docs/docs.go:					{Name: "password", Type: "string", Description: "Пароль", Required: true},
+./internal/docs/docs.go:				},
+./internal/docs/docs.go:				Response: "201 Created",
+./internal/docs/docs.go:			},
+./internal/docs/docs.go:			{
+./internal/docs/docs.go:				Method:      "POST",
+./internal/docs/docs.go:				Path:        "/api/v1/login",
+./internal/docs/docs.go:				Description: "Аутентификация пользователя",
+./internal/docs/docs.go:				Auth:        false,
+./internal/docs/docs.go:				Request: []Field{
+./internal/docs/docs.go:					{Name: "username", Type: "string", Description: "Имя пользователя", Required: true},
+./internal/docs/docs.go:					{Name: "password", Type: "string", Description: "Пароль", Required: true},
+./internal/docs/docs.go:				},
+./internal/docs/docs.go:				Response: `{"access_token": "jwt_string", "refresh_token": "opaque_string", "expires_in": 900}`,
+./internal/docs/docs.go:			},
+./internal/docs/docs.go:			{
+./internal/docs/docs.go:				Method:      "POST",
+./internal/docs/docs.go:				Path:        "/api/v1/refresh",
+./internal/docs/docs.go:				Description: "Обновление Access Token с помощью Refresh Token",
+./internal/docs/docs.go:				Auth:        false,
+./internal/docs/docs.go:				Request: []Field{
+./internal/docs/docs.go:					{Name: "refresh_token", Type: "string", Description: "Действующий Refresh Token", Required: true},
+./internal/docs/docs.go:				},
+./internal/docs/docs.go:				Response: `{"access_token": "new_jwt", "refresh_token": "new_opaque_string", "expires_in": 900}`,
+./internal/docs/docs.go:			},
+./internal/docs/docs.go:			{
+./internal/docs/docs.go:				Method:      "POST",
+./internal/docs/docs.go:				Path:        "/api/v1/logout",
+./internal/docs/docs.go:				Description: "Отзыв Refresh Token (Logout)",
+./internal/docs/docs.go:				Auth:        false,
+./internal/docs/docs.go:				Request: []Field{
+./internal/docs/docs.go:					{Name: "refresh_token", Type: "string", Description: "Refresh Token для отзыва", Required: true},
+./internal/docs/docs.go:				},
+./internal/docs/docs.go:				Response: "204 No Content",
+./internal/docs/docs.go:			},
+./internal/docs/docs.go:			{
+./internal/docs/docs.go:				Method:      "GET",
+./internal/docs/docs.go:				Path:        "/api/v1/docs",
+./internal/docs/docs.go:				Description: "Получить документацию API в формате JSON",
+./internal/docs/docs.go:				Auth:        false,
+./internal/docs/docs.go:				Response:    "JSON с описанием всех роутов",
+./internal/docs/docs.go:			},
+./internal/docs/docs.go:			{
+./internal/docs/docs.go:				Method:      "POST",
+./internal/docs/docs.go:				Path:        "/api/v1/teams",
+./internal/docs/docs.go:				Description: "Создать новую команду",
+./internal/docs/docs.go:				Auth:        true,
+./internal/docs/docs.go:				Request: []Field{
+./internal/docs/docs.go:					{Name: "name", Type: "string", Description: "Название команды", Required: true},
+./internal/docs/docs.go:				},
+./internal/docs/docs.go:				Response: "Объект созданной команды",
+./internal/docs/docs.go:			},
+./internal/docs/docs.go:			{
+./internal/docs/docs.go:				Method:      "GET",
+./internal/docs/docs.go:				Path:        "/api/v1/teams",
+./internal/docs/docs.go:				Description: "Получить список команд пользователя",
+./internal/docs/docs.go:				Auth:        true,
+./internal/docs/docs.go:				Response:    "Массив команд",
+./internal/docs/docs.go:			},
+./internal/docs/docs.go:			{
+./internal/docs/docs.go:				Method:      "POST",
+./internal/docs/docs.go:				Path:        "/api/v1/teams/{id}/invite",
+./internal/docs/docs.go:				Description: "Пригласить пользователя в команду (только owner/admin)",
+./internal/docs/docs.go:				Auth:        true,
+./internal/docs/docs.go:				Request: []Field{
+./internal/docs/docs.go:					{Name: "user_id", Type: "int64", Description: "ID приглашаемого пользователя", Required: true},
+./internal/docs/docs.go:				},
+./internal/docs/docs.go:				Response: "200 OK",
+./internal/docs/docs.go:			},
+./internal/docs/docs.go:			{
+./internal/docs/docs.go:				Method:      "POST",
+./internal/docs/docs.go:				Path:        "/api/v1/tasks",
+./internal/docs/docs.go:				Description: "Создать задачу в команде",
+./internal/docs/docs.go:				Auth:        true,
+./internal/docs/docs.go:				Request: []Field{
+./internal/docs/docs.go:					{Name: "team_id", Type: "int64", Description: "ID команды", Required: true},
+./internal/docs/docs.go:					{Name: "title", Type: "string", Description: "Название задачи", Required: true},
+./internal/docs/docs.go:					{Name: "description", Type: "string", Description: "Описание", Required: false},
+./internal/docs/docs.go:					{Name: "status", Type: "string", Description: "Статус (todo, in_progress, done)", Required: true},
+./internal/docs/docs.go:					{Name: "assignee_id", Type: "int64", Description: "ID исполнителя", Required: false},
+./internal/docs/docs.go:				},
+./internal/docs/docs.go:				Response: "Объект созданной задачи",
+./internal/docs/docs.go:			},
+./internal/docs/docs.go:			{
+./internal/docs/docs.go:				Method:      "GET",
+./internal/docs/docs.go:				Path:        "/api/v1/tasks",
+./internal/docs/docs.go:				Description: "Получить список задач (с фильтрацией)",
+./internal/docs/docs.go:				Auth:        true,
+./internal/docs/docs.go:				Request: []Field{
+./internal/docs/docs.go:					{Name: "team_id", Type: "query", Description: "Фильтр по команде", Required: true},
+./internal/docs/docs.go:					{Name: "status", Type: "query", Description: "Фильтр по статусу", Required: false},
+./internal/docs/docs.go:					{Name: "assignee_id", Type: "query", Description: "Фильтр по исполнителю", Required: false},
+./internal/docs/docs.go:					{Name: "limit", Type: "query", Description: "Пагинация: лимит", Required: false},
+./internal/docs/docs.go:					{Name: "offset", Type: "query", Description: "Пагинация: отступ", Required: false},
+./internal/docs/docs.go:				},
+./internal/docs/docs.go:				Response: "Массив задач",
+./internal/docs/docs.go:			},
+./internal/docs/docs.go:			{
+./internal/docs/docs.go:				Method:      "PUT",
+./internal/docs/docs.go:				Path:        "/api/v1/tasks/{id}",
+./internal/docs/docs.go:				Description: "Обновить статус задачи",
+./internal/docs/docs.go:				Auth:        true,
+./internal/docs/docs.go:				Request: []Field{
+./internal/docs/docs.go:					{Name: "team_id", Type: "int64", Description: "ID команды", Required: true},
+./internal/docs/docs.go:					{Name: "status", Type: "string", Description: "Новый статус", Required: true},
+./internal/docs/docs.go:				},
+./internal/docs/docs.go:				Response: "200 OK",
+./internal/docs/docs.go:			},
+./internal/docs/docs.go:			{
+./internal/docs/docs.go:				Method:      "GET",
+./internal/docs/docs.go:				Path:        "/api/v1/tasks/{id}/history",
+./internal/docs/docs.go:				Description: "Получить историю изменений задачи",
+./internal/docs/docs.go:				Auth:        true,
+./internal/docs/docs.go:				Response:    "Массив записей истории",
+./internal/docs/docs.go:			},
+./internal/docs/docs.go:			{
+./internal/docs/docs.go:				Method:      "POST",
+./internal/docs/docs.go:				Path:        "/api/v1/tasks/{id}/comments",
+./internal/docs/docs.go:				Description: "Добавить комментарий к задаче",
+./internal/docs/docs.go:				Auth:        true,
+./internal/docs/docs.go:				Request: []Field{
+./internal/docs/docs.go:					{Name: "content", Type: "string", Description: "Текст комментария", Required: true},
+./internal/docs/docs.go:				},
+./internal/docs/docs.go:				Response: "Объект созданного комментария",
+./internal/docs/docs.go:			},
+./internal/docs/docs.go:			{
+./internal/docs/docs.go:				Method:      "GET",
+./internal/docs/docs.go:				Path:        "/api/v1/tasks/{id}/comments",
+./internal/docs/docs.go:				Description: "Получить комментарии к задаче",
+./internal/docs/docs.go:				Auth:        true,
+./internal/docs/docs.go:				Response:    "Массив комментариев",
+./internal/docs/docs.go:			},
+./internal/docs/docs.go:			{
+./internal/docs/docs.go:				Method:      "GET",
+./internal/docs/docs.go:				Path:        "/api/v1/analytics",
+./internal/docs/docs.go:				Description: "Получить аналитику (статистика команд, топ пользователей, невалидные задачи)",
+./internal/docs/docs.go:				Auth:        true,
+./internal/docs/docs.go:				Response:    "Сложный JSON объект со статистикой",
+./internal/docs/docs.go:			},
+./internal/docs/docs.go:		},
+./internal/docs/docs.go:	}
+./internal/docs/docs.go:}
+./internal/domain/models.go:package domain
+./internal/domain/models.go:
+./internal/domain/models.go:import "time"
+./internal/domain/models.go:
+./internal/domain/models.go:type User struct {
+./internal/domain/models.go:	ID           int64     `db:"id" json:"id"`
+./internal/domain/models.go:	Email        string    `db:"email" json:"email"`
+./internal/domain/models.go:	Username     string    `db:"username" json:"username"`
+./internal/domain/models.go:	PasswordHash string    `db:"password_hash" json:"-"`
+./internal/domain/models.go:	CreatedAt    time.Time `db:"created_at" json:"created_at"`
+./internal/domain/models.go:	UpdatedAt    time.Time `db:"updated_at" json:"updated_at"`
+./internal/domain/models.go:}
+./internal/domain/models.go:
+./internal/domain/models.go:type Team struct {
+./internal/domain/models.go:	ID        int64     `db:"id" json:"id"`
+./internal/domain/models.go:	Name      string    `db:"name" json:"name"`
+./internal/domain/models.go:	CreatedBy int64     `db:"created_by" json:"created_by"`
+./internal/domain/models.go:	CreatedAt time.Time `db:"created_at" json:"created_at"`
+./internal/domain/models.go:	UpdatedAt time.Time `db:"updated_at" json:"updated_at"`
+./internal/domain/models.go:}
+./internal/domain/models.go:
+./internal/domain/models.go:type Task struct {
+./internal/domain/models.go:	ID          int64      `db:"id" json:"id"`
+./internal/domain/models.go:	TeamID      int64      `db:"team_id" json:"team_id"`
+./internal/domain/models.go:	Title       string     `db:"title" json:"title"`
+./internal/domain/models.go:	Description string     `db:"description" json:"description"`
+./internal/domain/models.go:	Status      string     `db:"status" json:"status"`
+./internal/domain/models.go:	AssigneeID  *int64     `db:"assignee_id" json:"assignee_id"`
+./internal/domain/models.go:	CreatedBy   int64      `db:"created_by" json:"created_by"`
+./internal/domain/models.go:	CreatedAt   time.Time  `db:"created_at" json:"created_at"`
+./internal/domain/models.go:	UpdatedAt   time.Time  `db:"updated_at" json:"updated_at"`
+./internal/domain/models.go:}
+./internal/domain/models.go:
+./internal/domain/models.go:type TaskHistory struct {
+./internal/domain/models.go:	ID        int64     `db:"id" json:"id"`
+./internal/domain/models.go:	TaskID    int64     `db:"task_id" json:"task_id"`
+./internal/domain/models.go:	ChangedBy int64     `db:"changed_by" json:"changed_by"`
+./internal/domain/models.go:	OldStatus string    `db:"old_status" json:"old_status"`
+./internal/domain/models.go:	NewStatus string    `db:"new_status" json:"new_status"`
+./internal/domain/models.go:	ChangedAt time.Time `db:"changed_at" json:"changed_at"`
+./internal/domain/models.go:}
+./internal/domain/models.go:
+./internal/domain/models.go:type Comment struct {
+./internal/domain/models.go:	ID        int64     `db:"id" json:"id"`
+./internal/domain/models.go:	TaskID    int64     `db:"task_id" json:"task_id"`
+./internal/domain/models.go:	UserID    int64     `db:"user_id" json:"user_id"`
+./internal/domain/models.go:	Content   string    `db:"content" json:"content"`
+./internal/domain/models.go:	CreatedAt time.Time `db:"created_at" json:"created_at"`
+./internal/domain/models.go:}
+./internal/domain/models.go:
+./internal/domain/models.go:type TokenPair struct {
+./internal/domain/models.go:	AccessToken  string `json:"access_token"`
+./internal/domain/models.go:	RefreshToken string `json:"refresh_token"`
+./internal/domain/models.go:	ExpiresIn    int64  `json:"expires_in"`
+./internal/domain/models.go:}
+./internal/handler/handler.go:package handler
+./internal/handler/handler.go:
+./internal/handler/handler.go:import (
+./internal/handler/handler.go:	"encoding/json"
+./internal/handler/handler.go:	"net/http"
+./internal/handler/handler.go:	"strconv"
+./internal/handler/handler.go:
+./internal/handler/handler.go:	"github.com/go-chi/chi/v5"
+./internal/handler/handler.go:	"github.com/go-chi/chi/v5/middleware"
+./internal/handler/handler.go:	"github.com/xela07ax/luna-tasks-sbs/internal/config"
+./internal/handler/handler.go:	"github.com/xela07ax/luna-tasks-sbs/internal/docs"
+./internal/handler/handler.go:	"github.com/xela07ax/luna-tasks-sbs/internal/domain"
+./internal/handler/handler.go:	"github.com/xela07ax/luna-tasks-sbs/internal/infra"
+./internal/handler/handler.go:	"github.com/xela07ax/luna-tasks-sbs/internal/service"
+./internal/handler/handler.go:	"go.uber.org/zap"
+./internal/handler/handler.go:)
+./internal/handler/handler.go:
+./internal/handler/handler.go:type Handler struct {
+./internal/handler/handler.go:	svc    *service.Service
+./internal/handler/handler.go:	logger *zap.Logger
+./internal/handler/handler.go:	cfg    *config.Config
+./internal/handler/handler.go:}
+./internal/handler/handler.go:
+./internal/handler/handler.go:func NewHandler(svc *service.Service, logger *zap.Logger, cfg *config.Config) *Handler {
+./internal/handler/handler.go:	return &Handler{svc: svc, logger: logger, cfg: cfg}
+./internal/handler/handler.go:}
+./internal/handler/handler.go:
+./internal/handler/handler.go:func (h *Handler) InitRoutes() *chi.Mux {
+./internal/handler/handler.go:	r := chi.NewRouter()
+./internal/handler/handler.go:
+./internal/handler/handler.go:	r.Use(middleware.RequestID)
+./internal/handler/handler.go:	r.Use(middleware.RealIP)
+./internal/handler/handler.go:	r.Use(middleware.Recoverer)
+./internal/handler/handler.go:	
+./internal/handler/handler.go:	if h.cfg.Metrics.Enabled {
+./internal/handler/handler.go:		r.Use(infra.MetricsMiddleware)
+./internal/handler/handler.go:	}
+./internal/handler/handler.go:
+./internal/handler/handler.go:	r.Use(infra.CORSMiddleware(h.cfg.Server.CorsAllowedOrigins))
+./internal/handler/handler.go:
+./internal/handler/handler.go:	r.Route("/api/v1", func(r chi.Router) {
+./internal/handler/handler.go:		// Публичные эндпоинты
+./internal/handler/handler.go:		r.Post("/register", h.Register)
+./internal/handler/handler.go:		r.Post("/login", h.Login)
+./internal/handler/handler.go:		r.Post("/refresh", h.Refresh)
+./internal/handler/handler.go:		r.Post("/logout", h.Logout)
+./internal/handler/handler.go:		r.Get("/docs", h.GetDocs) // Zero Dependency Docs
+./internal/handler/handler.go:
+./internal/handler/handler.go:		// Защищенные эндпоинты
+./internal/handler/handler.go:		r.Group(func(r chi.Router) {
+./internal/handler/handler.go:			r.Use(infra.AuthMiddleware(h.cfg.Auth.PublicKey))
+./internal/handler/handler.go:			r.Use(infra.RateLimitMiddleware(h.cfg.RateLimit.RequestsPerMinute, h.cfg.RateLimit.Burst))
+./internal/handler/handler.go:
+./internal/handler/handler.go:			r.Route("/teams", func(r chi.Router) {
+./internal/handler/handler.go:				r.Post("/", h.CreateTeam)
+./internal/handler/handler.go:				r.Get("/", h.GetTeams)
+./internal/handler/handler.go:				r.Post("/{id}/invite", h.InviteToTeam)
+./internal/handler/handler.go:			})
+./internal/handler/handler.go:
+./internal/handler/handler.go:			r.Route("/tasks", func(r chi.Router) {
+./internal/handler/handler.go:				r.Post("/", h.CreateTask)
+./internal/handler/handler.go:				r.Get("/", h.GetTasks)
+./internal/handler/handler.go:				r.Put("/{id}", h.UpdateTask)
+./internal/handler/handler.go:				r.Get("/{id}/history", h.GetTaskHistory)
+./internal/handler/handler.go:				r.Post("/{id}/comments", h.AddComment)
+./internal/handler/handler.go:				r.Get("/{id}/comments", h.GetTaskComments)
+./internal/handler/handler.go:			})
+./internal/handler/handler.go:
+./internal/handler/handler.go:			r.Get("/analytics", h.GetAnalytics)
+./internal/handler/handler.go:		})
+./internal/handler/handler.go:	})
+./internal/handler/handler.go:
+./internal/handler/handler.go:	return r
+./internal/handler/handler.go:}
+./internal/handler/handler.go:
+./internal/handler/handler.go:func (h *Handler) GetDocs(w http.ResponseWriter, r *http.Request) {
+./internal/handler/handler.go:	w.Header().Set("Content-Type", "application/json")
+./internal/handler/handler.go:	json.NewEncoder(w).Encode(docs.GetAPIDocs())
+./internal/handler/handler.go:}
+./internal/handler/handler.go:
+./internal/handler/handler.go:func (h *Handler) Register(w http.ResponseWriter, r *http.Request) {
+./internal/handler/handler.go:	var req struct {
+./internal/handler/handler.go:		Email    string `json:"email"`
+./internal/handler/handler.go:		Username string `json:"username"`
+./internal/handler/handler.go:		Password string `json:"password"`
+./internal/handler/handler.go:	}
+./internal/handler/handler.go:	if err := json.NewDecoder(r.Body).Decode(&req); err != nil {
+./internal/handler/handler.go:		http.Error(w, err.Error(), http.StatusBadRequest)
+./internal/handler/handler.go:		return
+./internal/handler/handler.go:	}
+./internal/handler/handler.go:	if err := h.svc.Register(r.Context(), req.Email, req.Username, req.Password); err != nil {
+./internal/handler/handler.go:		http.Error(w, err.Error(), http.StatusInternalServerError)
+./internal/handler/handler.go:		return
+./internal/handler/handler.go:	}
+./internal/handler/handler.go:	w.WriteHeader(http.StatusCreated)
+./internal/handler/handler.go:}
+./internal/handler/handler.go:
+./internal/handler/handler.go:func (h *Handler) Login(w http.ResponseWriter, r *http.Request) {
+./internal/handler/handler.go:	var req struct {
+./internal/handler/handler.go:		Username string `json:"username"`
+./internal/handler/handler.go:		Password string `json:"password"`
+./internal/handler/handler.go:	}
+./internal/handler/handler.go:	if err := json.NewDecoder(r.Body).Decode(&req); err != nil {
+./internal/handler/handler.go:		http.Error(w, err.Error(), http.StatusBadRequest)
+./internal/handler/handler.go:		return
+./internal/handler/handler.go:	}
+./internal/handler/handler.go:	tokens, err := h.svc.Login(r.Context(), req.Username, req.Password)
+./internal/handler/handler.go:	if err != nil {
+./internal/handler/handler.go:		http.Error(w, "unauthorized", http.StatusUnauthorized)
+./internal/handler/handler.go:		return
+./internal/handler/handler.go:	}
+./internal/handler/handler.go:	json.NewEncoder(w).Encode(tokens)
+./internal/handler/handler.go:}
+./internal/handler/handler.go:
+./internal/handler/handler.go:func (h *Handler) Refresh(w http.ResponseWriter, r *http.Request) {
+./internal/handler/handler.go:	var req struct {
+./internal/handler/handler.go:		RefreshToken string `json:"refresh_token"`
+./internal/handler/handler.go:	}
+./internal/handler/handler.go:	if err := json.NewDecoder(r.Body).Decode(&req); err != nil {
+./internal/handler/handler.go:		http.Error(w, "invalid request body", http.StatusBadRequest)
+./internal/handler/handler.go:		return
+./internal/handler/handler.go:	}
+./internal/handler/handler.go:	
+./internal/handler/handler.go:	tokens, err := h.svc.RefreshTokens(r.Context(), req.RefreshToken)
+./internal/handler/handler.go:	if err != nil {
+./internal/handler/handler.go:		http.Error(w, err.Error(), http.StatusUnauthorized)
+./internal/handler/handler.go:		return
+./internal/handler/handler.go:	}
+./internal/handler/handler.go:	json.NewEncoder(w).Encode(tokens)
+./internal/handler/handler.go:}
+./internal/handler/handler.go:
+./internal/handler/handler.go:func (h *Handler) Logout(w http.ResponseWriter, r *http.Request) {
+./internal/handler/handler.go:	var req struct {
+./internal/handler/handler.go:		RefreshToken string `json:"refresh_token"`
+./internal/handler/handler.go:	}
+./internal/handler/handler.go:	if err := json.NewDecoder(r.Body).Decode(&req); err != nil {
+./internal/handler/handler.go:		http.Error(w, "invalid request body", http.StatusBadRequest)
+./internal/handler/handler.go:		return
+./internal/handler/handler.go:	}
+./internal/handler/handler.go:	
+./internal/handler/handler.go:	_ = h.svc.Logout(r.Context(), req.RefreshToken)
+./internal/handler/handler.go:	w.WriteHeader(http.StatusNoContent)
+./internal/handler/handler.go:}
+./internal/handler/handler.go:
+./internal/handler/handler.go:func (h *Handler) CreateTeam(w http.ResponseWriter, r *http.Request) {
+./internal/handler/handler.go:	userID := r.Context().Value("user_id").(int64)
+./internal/handler/handler.go:	var req struct {
+./internal/handler/handler.go:		Name string `json:"name"`
+./internal/handler/handler.go:	}
+./internal/handler/handler.go:	json.NewDecoder(r.Body).Decode(&req)
+./internal/handler/handler.go:	
+./internal/handler/handler.go:	team, err := h.svc.CreateTeam(r.Context(), req.Name, userID)
+./internal/handler/handler.go:	if err != nil {
+./internal/handler/handler.go:		http.Error(w, err.Error(), http.StatusInternalServerError)
+./internal/handler/handler.go:		return
+./internal/handler/handler.go:	}
+./internal/handler/handler.go:	json.NewEncoder(w).Encode(team)
+./internal/handler/handler.go:}
+./internal/handler/handler.go:
+./internal/handler/handler.go:func (h *Handler) GetTeams(w http.ResponseWriter, r *http.Request) {
+./internal/handler/handler.go:	userID := r.Context().Value("user_id").(int64)
+./internal/handler/handler.go:	teams, err := h.svc.GetUserTeams(r.Context(), userID)
+./internal/handler/handler.go:	if err != nil {
+./internal/handler/handler.go:		http.Error(w, err.Error(), http.StatusInternalServerError)
+./internal/handler/handler.go:		return
+./internal/handler/handler.go:	}
+./internal/handler/handler.go:	json.NewEncoder(w).Encode(teams)
+./internal/handler/handler.go:}
+./internal/handler/handler.go:
+./internal/handler/handler.go:func (h *Handler) InviteToTeam(w http.ResponseWriter, r *http.Request) {
+./internal/handler/handler.go:	inviterID := r.Context().Value("user_id").(int64)
+./internal/handler/handler.go:	teamID, _ := strconv.ParseInt(chi.URLParam(r, "id"), 10, 64)
+./internal/handler/handler.go:	
+./internal/handler/handler.go:	var req struct {
+./internal/handler/handler.go:		UserID int64 `json:"user_id"`
+./internal/handler/handler.go:	}
+./internal/handler/handler.go:	json.NewDecoder(r.Body).Decode(&req)
+./internal/handler/handler.go:
+./internal/handler/handler.go:	if err := h.svc.InviteToTeam(r.Context(), teamID, inviterID, req.UserID); err != nil {
+./internal/handler/handler.go:		http.Error(w, err.Error(), http.StatusForbidden)
+./internal/handler/handler.go:		return
+./internal/handler/handler.go:	}
+./internal/handler/handler.go:	w.WriteHeader(http.StatusOK)
+./internal/handler/handler.go:}
+./internal/handler/handler.go:
+./internal/handler/handler.go:func (h *Handler) CreateTask(w http.ResponseWriter, r *http.Request) {
+./internal/handler/handler.go:	userID := r.Context().Value("user_id").(int64)
+./internal/handler/handler.go:	var task domain.Task
+./internal/handler/handler.go:	json.NewDecoder(r.Body).Decode(&task)
+./internal/handler/handler.go:
+./internal/handler/handler.go:	if err := h.svc.CreateTask(r.Context(), &task, userID); err != nil {
+./internal/handler/handler.go:		http.Error(w, err.Error(), http.StatusForbidden)
+./internal/handler/handler.go:		return
+./internal/handler/handler.go:	}
+./internal/handler/handler.go:	json.NewEncoder(w).Encode(task)
+./internal/handler/handler.go:}
+./internal/handler/handler.go:
+./internal/handler/handler.go:func (h *Handler) GetTasks(w http.ResponseWriter, r *http.Request) {
+./internal/handler/handler.go:	teamID, _ := strconv.ParseInt(r.URL.Query().Get("team_id"), 10, 64)
+./internal/handler/handler.go:	status := r.URL.Query().Get("status")
+./internal/handler/handler.go:	var assigneeID *int64
+./internal/handler/handler.go:	if a := r.URL.Query().Get("assignee_id"); a != "" {
+./internal/handler/handler.go:		id, _ := strconv.ParseInt(a, 10, 64)
+./internal/handler/handler.go:		assigneeID = &id
+./internal/handler/handler.go:	}
+./internal/handler/handler.go:	
+./internal/handler/handler.go:	limit := 10
+./internal/handler/handler.go:	offset := 0
+./internal/handler/handler.go:	if l := r.URL.Query().Get("limit"); l != "" {
+./internal/handler/handler.go:		limit, _ = strconv.Atoi(l)
+./internal/handler/handler.go:	}
+./internal/handler/handler.go:	if o := r.URL.Query().Get("offset"); o != "" {
+./internal/handler/handler.go:		offset, _ = strconv.Atoi(o)
+./internal/handler/handler.go:	}
+./internal/handler/handler.go:
+./internal/handler/handler.go:	tasks, err := h.svc.GetTasks(r.Context(), teamID, status, assigneeID, limit, offset)
+./internal/handler/handler.go:	if err != nil {
+./internal/handler/handler.go:		http.Error(w, err.Error(), http.StatusInternalServerError)
+./internal/handler/handler.go:		return
+./internal/handler/handler.go:	}
+./internal/handler/handler.go:	json.NewEncoder(w).Encode(tasks)
+./internal/handler/handler.go:}
+./internal/handler/handler.go:
+./internal/handler/handler.go:func (h *Handler) UpdateTask(w http.ResponseWriter, r *http.Request) {
+./internal/handler/handler.go:	userID := r.Context().Value("user_id").(int64)
+./internal/handler/handler.go:	taskID, _ := strconv.ParseInt(chi.URLParam(r, "id"), 10, 64)
+./internal/handler/handler.go:	
+./internal/handler/handler.go:	var req struct {
+./internal/handler/handler.go:		TeamID int64  `json:"team_id"`
+./internal/handler/handler.go:		Status string `json:"status"`
+./internal/handler/handler.go:	}
+./internal/handler/handler.go:	json.NewDecoder(r.Body).Decode(&req)
+./internal/handler/handler.go:
+./internal/handler/handler.go:	if err := h.svc.UpdateTask(r.Context(), taskID, req.TeamID, req.Status, userID); err != nil {
+./internal/handler/handler.go:		http.Error(w, err.Error(), http.StatusInternalServerError)
+./internal/handler/handler.go:		return
+./internal/handler/handler.go:	}
+./internal/handler/handler.go:	w.WriteHeader(http.StatusOK)
+./internal/handler/handler.go:}
+./internal/handler/handler.go:
+./internal/handler/handler.go:func (h *Handler) GetTaskHistory(w http.ResponseWriter, r *http.Request) {
+./internal/handler/handler.go:	taskID, _ := strconv.ParseInt(chi.URLParam(r, "id"), 10, 64)
+./internal/handler/handler.go:	history, err := h.svc.GetTaskHistory(r.Context(), taskID)
+./internal/handler/handler.go:	if err != nil {
+./internal/handler/handler.go:		http.Error(w, err.Error(), http.StatusInternalServerError)
+./internal/handler/handler.go:		return
+./internal/handler/handler.go:	}
+./internal/handler/handler.go:	json.NewEncoder(w).Encode(history)
+./internal/handler/handler.go:}
+./internal/handler/handler.go:
+./internal/handler/handler.go:func (h *Handler) AddComment(w http.ResponseWriter, r *http.Request) {
+./internal/handler/handler.go:	userID := r.Context().Value("user_id").(int64)
+./internal/handler/handler.go:	taskID, _ := strconv.ParseInt(chi.URLParam(r, "id"), 10, 64)
+./internal/handler/handler.go:	
+./internal/handler/handler.go:	var req struct {
+./internal/handler/handler.go:		Content string `json:"content"`
+./internal/handler/handler.go:	}
+./internal/handler/handler.go:	if err := json.NewDecoder(r.Body).Decode(&req); err != nil {
+./internal/handler/handler.go:		http.Error(w, "invalid request body", http.StatusBadRequest)
+./internal/handler/handler.go:		return
+./internal/handler/handler.go:	}
+./internal/handler/handler.go:
+./internal/handler/handler.go:	comment, err := h.svc.AddComment(r.Context(), taskID, userID, req.Content)
+./internal/handler/handler.go:	if err != nil {
+./internal/handler/handler.go:		if err.Error() == "task not found" || err.Error() == "user is not a member of the team" {
+./internal/handler/handler.go:			http.Error(w, err.Error(), http.StatusForbidden)
+./internal/handler/handler.go:			return
+./internal/handler/handler.go:		}
+./internal/handler/handler.go:		http.Error(w, err.Error(), http.StatusInternalServerError)
+./internal/handler/handler.go:		return
+./internal/handler/handler.go:	}
+./internal/handler/handler.go:	w.WriteHeader(http.StatusCreated)
+./internal/handler/handler.go:	json.NewEncoder(w).Encode(comment)
+./internal/handler/handler.go:}
+./internal/handler/handler.go:
+./internal/handler/handler.go:func (h *Handler) GetTaskComments(w http.ResponseWriter, r *http.Request) {
+./internal/handler/handler.go:	userID := r.Context().Value("user_id").(int64)
+./internal/handler/handler.go:	taskID, _ := strconv.ParseInt(chi.URLParam(r, "id"), 10, 64)
+./internal/handler/handler.go:
+./internal/handler/handler.go:	comments, err := h.svc.GetTaskComments(r.Context(), taskID, userID)
+./internal/handler/handler.go:	if err != nil {
+./internal/handler/handler.go:		http.Error(w, err.Error(), http.StatusForbidden)
+./internal/handler/handler.go:		return
+./internal/handler/handler.go:	}
+./internal/handler/handler.go:	json.NewEncoder(w).Encode(comments)
+./internal/handler/handler.go:}
+./internal/handler/handler.go:
+./internal/handler/handler.go:func (h *Handler) GetAnalytics(w http.ResponseWriter, r *http.Request) {
+./internal/handler/handler.go:	stats, err := h.svc.GetAnalytics(r.Context())
+./internal/handler/handler.go:	if err != nil {
+./internal/handler/handler.go:		http.Error(w, err.Error(), http.StatusInternalServerError)
+./internal/handler/handler.go:		return
+./internal/handler/handler.go:	}
+./internal/handler/handler.go:	json.NewEncoder(w).Encode(stats)
+./internal/handler/handler.go:}
+./internal/infra/infra.go:package infra
+./internal/infra/infra.go:
+./internal/infra/infra.go:import (
+./internal/infra/infra.go:	"context"
+./internal/infra/infra.go:	"crypto/rsa"
+./internal/infra/infra.go:	"errors"
+./internal/infra/infra.go:	"fmt"
+./internal/infra/infra.go:	"net/http"
+./internal/infra/infra.go:	"strings"
+./internal/infra/infra.go:	"sync"
+./internal/infra/infra.go:	"time"
+./internal/infra/infra.go:
+./internal/infra/infra.go:	"github.com/golang-jwt/jwt/v5"
+./internal/infra/infra.go:	"github.com/prometheus/client_golang/prometheus"
+./internal/infra/infra.go:	"github.com/prometheus/client_golang/prometheus/promauto"
+./internal/infra/infra.go:	"golang.org/x/time/rate"
+./internal/infra/infra.go:)
+./internal/infra/infra.go:
+./internal/infra/infra.go:// JWT
+./internal/infra/infra.go:type JWTManager struct {
+./internal/infra/infra.go:	privateKey *rsa.PrivateKey
+./internal/infra/infra.go:	publicKey  *rsa.PublicKey
+./internal/infra/infra.go:	ttl        time.Duration
+./internal/infra/infra.go:}
+./internal/infra/infra.go:
+./internal/infra/infra.go:func NewJWTManager(privKeyPEM, pubKeyPEM []byte, ttl time.Duration) (*JWTManager, error) {
+./internal/infra/infra.go:	var privKey *rsa.PrivateKey
+./internal/infra/infra.go:	var pubKey *rsa.PublicKey
+./internal/infra/infra.go:	var err error
+./internal/infra/infra.go:
+./internal/infra/infra.go:	if len(privKeyPEM) > 0 {
+./internal/infra/infra.go:		privKey, err = jwt.ParseRSAPrivateKeyFromPEM(privKeyPEM)
+./internal/infra/infra.go:		if err != nil {
+./internal/infra/infra.go:			return nil, fmt.Errorf("failed to parse private key: %w", err)
+./internal/infra/infra.go:		}
+./internal/infra/infra.go:	}
+./internal/infra/infra.go:
+./internal/infra/infra.go:	if len(pubKeyPEM) > 0 {
+./internal/infra/infra.go:		pubKey, err = jwt.ParseRSAPublicKeyFromPEM(pubKeyPEM)
+./internal/infra/infra.go:		if err != nil {
+./internal/infra/infra.go:			return nil, fmt.Errorf("failed to parse public key: %w", err)
+./internal/infra/infra.go:		}
+./internal/infra/infra.go:	}
+./internal/infra/infra.go:
+./internal/infra/infra.go:	return &JWTManager{privateKey: privKey, publicKey: pubKey, ttl: ttl}, nil
+./internal/infra/infra.go:}
+./internal/infra/infra.go:
+./internal/infra/infra.go:func (m *JWTManager) GenerateToken(userID int64, username string) (string, error) {
+./internal/infra/infra.go:	if m.privateKey == nil {
+./internal/infra/infra.go:		return "", errors.New("private key is not configured for token generation")
+./internal/infra/infra.go:	}
+./internal/infra/infra.go:
+./internal/infra/infra.go:	claims := jwt.MapClaims{
+./internal/infra/infra.go:		"user_id":  userID,
+./internal/infra/infra.go:		"username": username,
+./internal/infra/infra.go:		"exp":      time.Now().Add(m.ttl).Unix(),
+./internal/infra/infra.go:	}
+./internal/infra/infra.go:	token := jwt.NewWithClaims(jwt.SigningMethodRS256, claims)
+./internal/infra/infra.go:	return token.SignedString(m.privateKey)
+./internal/infra/infra.go:}
+./internal/infra/infra.go:
+./internal/infra/infra.go:func AuthMiddleware(pubKeyPEM []byte) func(http.Handler) http.Handler {
+./internal/infra/infra.go:	pubKey, err := jwt.ParseRSAPublicKeyFromPEM(pubKeyPEM)
+./internal/infra/infra.go:	if err != nil {
+./internal/infra/infra.go:		// В реальном приложении лучше падать при старте, но для middleware
+./internal/infra/infra.go:		// мы просто будем отклонять все запросы, если ключ невалиден.
+./internal/infra/infra.go:		panic(fmt.Sprintf("invalid public key for AuthMiddleware: %v", err))
+./internal/infra/infra.go:	}
+./internal/infra/infra.go:
+./internal/infra/infra.go:	return func(next http.Handler) http.Handler {
+./internal/infra/infra.go:		return http.HandlerFunc(func(w http.ResponseWriter, r *http.Request) {
+./internal/infra/infra.go:			authHeader := r.Header.Get("Authorization")
+./internal/infra/infra.go:			if authHeader == "" {
+./internal/infra/infra.go:				http.Error(w, "unauthorized", http.StatusUnauthorized)
+./internal/infra/infra.go:				return
+./internal/infra/infra.go:			}
+./internal/infra/infra.go:			tokenStr := strings.TrimPrefix(authHeader, "Bearer ")
+./internal/infra/infra.go:			token, err := jwt.Parse(tokenStr, func(token *jwt.Token) (interface{}, error) {
+./internal/infra/infra.go:				if _, ok := token.Method.(*jwt.SigningMethodRSA); !ok {
+./internal/infra/infra.go:					return nil, fmt.Errorf("unexpected signing method: %v", token.Header["alg"])
+./internal/infra/infra.go:				}
+./internal/infra/infra.go:				return pubKey, nil
+./internal/infra/infra.go:			})
+./internal/infra/infra.go:
+./internal/infra/infra.go:			if err != nil || !token.Valid {
+./internal/infra/infra.go:				http.Error(w, "unauthorized", http.StatusUnauthorized)
+./internal/infra/infra.go:				return
+./internal/infra/infra.go:			}
+./internal/infra/infra.go:
+./internal/infra/infra.go:			claims, ok := token.Claims.(jwt.MapClaims)
+./internal/infra/infra.go:			if !ok {
+./internal/infra/infra.go:				http.Error(w, "unauthorized", http.StatusUnauthorized)
+./internal/infra/infra.go:				return
+./internal/infra/infra.go:			}
+./internal/infra/infra.go:
+./internal/infra/infra.go:			userID := int64(claims["user_id"].(float64))
+./internal/infra/infra.go:			ctx := context.WithValue(r.Context(), "user_id", userID)
+./internal/infra/infra.go:			next.ServeHTTP(w, r.WithContext(ctx))
+./internal/infra/infra.go:		})
+./internal/infra/infra.go:	}
+./internal/infra/infra.go:}
+./internal/infra/infra.go:
+./internal/infra/infra.go:// Rate Limiter
+./internal/infra/infra.go:func RateLimitMiddleware(requestsPerMinute float64, burst int) func(http.Handler) http.Handler {
+./internal/infra/infra.go:	var (
+./internal/infra/infra.go:		limiters = make(map[int64]*rate.Limiter)
+./internal/infra/infra.go:		mu       sync.Mutex
+./internal/infra/infra.go:	)
+./internal/infra/infra.go:
+./internal/infra/infra.go:	return func(next http.Handler) http.Handler {
+./internal/infra/infra.go:		return http.HandlerFunc(func(w http.ResponseWriter, r *http.Request) {
+./internal/infra/infra.go:			userID, ok := r.Context().Value("user_id").(int64)
+./internal/infra/infra.go:			if !ok {
+./internal/infra/infra.go:				next.ServeHTTP(w, r)
+./internal/infra/infra.go:				return
+./internal/infra/infra.go:			}
+./internal/infra/infra.go:
+./internal/infra/infra.go:			mu.Lock()
+./internal/infra/infra.go:			limiter, exists := limiters[userID]
+./internal/infra/infra.go:			if !exists {
+./internal/infra/infra.go:				limiter = rate.NewLimiter(rate.Limit(requestsPerMinute/60.0), burst)
+./internal/infra/infra.go:				limiters[userID] = limiter
+./internal/infra/infra.go:			}
+./internal/infra/infra.go:			mu.Unlock()
+./internal/infra/infra.go:
+./internal/infra/infra.go:			if !limiter.Allow() {
+./internal/infra/infra.go:				http.Error(w, "too many requests", http.StatusTooManyRequests)
+./internal/infra/infra.go:				return
+./internal/infra/infra.go:			}
+./internal/infra/infra.go:			next.ServeHTTP(w, r)
+./internal/infra/infra.go:		})
+./internal/infra/infra.go:	}
+./internal/infra/infra.go:}
+./internal/infra/infra.go:
+./internal/infra/infra.go:// CORS Middleware
+./internal/infra/infra.go:func CORSMiddleware(allowedOrigins []string) func(http.Handler) http.Handler {
+./internal/infra/infra.go:	return func(next http.Handler) http.Handler {
+./internal/infra/infra.go:		return http.HandlerFunc(func(w http.ResponseWriter, r *http.Request) {
+./internal/infra/infra.go:			origin := r.Header.Get("Origin")
+./internal/infra/infra.go:			allowed := false
+./internal/infra/infra.go:			for _, o := range allowedOrigins {
+./internal/infra/infra.go:				if o == "*" || o == origin {
+./internal/infra/infra.go:					allowed = true
+./internal/infra/infra.go:					break
+./internal/infra/infra.go:				}
+./internal/infra/infra.go:			}
+./internal/infra/infra.go:
+./internal/infra/infra.go:			if allowed {
+./internal/infra/infra.go:				w.Header().Set("Access-Control-Allow-Origin", origin)
+./internal/infra/infra.go:				w.Header().Set("Access-Control-Allow-Methods", "GET, POST, PUT, DELETE, OPTIONS")
+./internal/infra/infra.go:				w.Header().Set("Access-Control-Allow-Headers", "Accept, Authorization, Content-Type, X-CSRF-Token")
+./internal/infra/infra.go:				w.Header().Set("Access-Control-Allow-Credentials", "true")
+./internal/infra/infra.go:			}
+./internal/infra/infra.go:
+./internal/infra/infra.go:			if r.Method == "OPTIONS" {
+./internal/infra/infra.go:				w.WriteHeader(http.StatusNoContent)
+./internal/infra/infra.go:				return
+./internal/infra/infra.go:			}
+./internal/infra/infra.go:
+./internal/infra/infra.go:			next.ServeHTTP(w, r)
+./internal/infra/infra.go:		})
+./internal/infra/infra.go:	}
+./internal/infra/infra.go:}
+./internal/infra/infra.go:
+./internal/infra/infra.go:// Metrics
+./internal/infra/infra.go:var (
+./internal/infra/infra.go:	httpRequestsTotal = promauto.NewCounterVec(prometheus.CounterOpts{
+./internal/infra/infra.go:		Name: "http_requests_total",
+./internal/infra/infra.go:		Help: "Total number of HTTP requests",
+./internal/infra/infra.go:	}, []string{"method", "path", "status"})
+./internal/infra/infra.go:	
+./internal/infra/infra.go:	httpRequestDuration = promauto.NewHistogramVec(prometheus.HistogramOpts{
+./internal/infra/infra.go:		Name: "http_request_duration_seconds",
+./internal/infra/infra.go:		Help: "HTTP request duration in seconds",
+./internal/infra/infra.go:	}, []string{"method", "path"})
+./internal/infra/infra.go:)
+./internal/infra/infra.go:
+./internal/infra/infra.go:type responseWriter struct {
+./internal/infra/infra.go:	http.ResponseWriter
+./internal/infra/infra.go:	status int
+./internal/infra/infra.go:}
+./internal/infra/infra.go:
+./internal/infra/infra.go:func (rw *responseWriter) WriteHeader(code int) {
+./internal/infra/infra.go:	rw.status = code
+./internal/infra/infra.go:	rw.ResponseWriter.WriteHeader(code)
+./internal/infra/infra.go:}
+./internal/infra/infra.go:
+./internal/infra/infra.go:func MetricsMiddleware(next http.Handler) http.Handler {
+./internal/infra/infra.go:	return http.HandlerFunc(func(w http.ResponseWriter, r *http.Request) {
+./internal/infra/infra.go:		start := time.Now()
+./internal/infra/infra.go:		rw := &responseWriter{w, http.StatusOK}
+./internal/infra/infra.go:		
+./internal/infra/infra.go:		next.ServeHTTP(rw, r)
+./internal/infra/infra.go:		
+./internal/infra/infra.go:		duration := time.Since(start).Seconds()
+./internal/infra/infra.go:		statusStr := "200" // Simplify for example
+./internal/infra/infra.go:		if rw.status != 0 {
+./internal/infra/infra.go:			statusStr = "error"
+./internal/infra/infra.go:		}
+./internal/infra/infra.go:		
+./internal/infra/infra.go:		httpRequestsTotal.WithLabelValues(r.Method, r.URL.Path, statusStr).Inc()
+./internal/infra/infra.go:		httpRequestDuration.WithLabelValues(r.Method, r.URL.Path).Observe(duration)
+./internal/infra/infra.go:	})
+./internal/infra/infra.go:}
+./internal/infra/infra.go:
+./internal/infra/infra.go:// Circuit Breaker (Simple implementation)
+./internal/infra/infra.go:type CircuitBreaker struct {
+./internal/infra/infra.go:	failureThreshold int
+./internal/infra/infra.go:	failures         int
+./internal/infra/infra.go:	lastFailure      time.Time
+./internal/infra/infra.go:	mu               sync.Mutex
+./internal/infra/infra.go:}
+./internal/infra/infra.go:
+./internal/infra/infra.go:func NewCircuitBreaker(threshold int) *CircuitBreaker {
+./internal/infra/infra.go:	return &CircuitBreaker{failureThreshold: threshold}
+./internal/infra/infra.go:}
+./internal/infra/infra.go:
+./internal/infra/infra.go:func (cb *CircuitBreaker) Execute(req func() error) error {
+./internal/infra/infra.go:	cb.mu.Lock()
+./internal/infra/infra.go:	if cb.failures >= cb.failureThreshold {
+./internal/infra/infra.go:		if time.Since(cb.lastFailure) < 30*time.Second {
+./internal/infra/infra.go:			cb.mu.Unlock()
+./internal/infra/infra.go:			return errors.New("circuit breaker open")
+./internal/infra/infra.go:		}
+./internal/infra/infra.go:		cb.failures = 0 // Half-open
+./internal/infra/infra.go:	}
+./internal/infra/infra.go:	cb.mu.Unlock()
+./internal/infra/infra.go:
+./internal/infra/infra.go:	err := req()
+./internal/infra/infra.go:
+./internal/infra/infra.go:	cb.mu.Lock()
+./internal/infra/infra.go:	defer cb.mu.Unlock()
+./internal/infra/infra.go:	if err != nil {
+./internal/infra/infra.go:		cb.failures++
+./internal/infra/infra.go:		cb.lastFailure = time.Now()
+./internal/infra/infra.go:		return err
+./internal/infra/infra.go:	}
+./internal/infra/infra.go:	cb.failures = 0
+./internal/infra/infra.go:	return nil
+./internal/infra/infra.go:}
+./internal/infra/infra.go:
+./internal/infra/infra.go:var EmailCircuitBreaker = NewCircuitBreaker(3)
+./internal/repository/repository.go:package repository
+./internal/repository/repository.go:
+./internal/repository/repository.go:import (
+./internal/repository/repository.go:	"context"
+./internal/repository/repository.go:	"database/sql"
+./internal/repository/repository.go:	"encoding/json"
+./internal/repository/repository.go:	"errors"
+./internal/repository/repository.go:	"fmt"
+./internal/repository/repository.go:	"time"
+./internal/repository/repository.go:
+./internal/repository/repository.go:	"github.com/jmoiron/sqlx"
+./internal/repository/repository.go:	"github.com/redis/go-redis/v9"
+./internal/repository/repository.go:	"github.com/xela07ax/luna-tasks-sbs/internal/domain"
+./internal/repository/repository.go:)
+./internal/repository/repository.go:
+./internal/repository/repository.go:type Repository struct {
+./internal/repository/repository.go:	db    *sqlx.DB
+./internal/repository/repository.go:	redis *redis.Client
+./internal/repository/repository.go:}
+./internal/repository/repository.go:
+./internal/repository/repository.go:func NewRepository(db *sqlx.DB, rdb *redis.Client) *Repository {
+./internal/repository/repository.go:	return &Repository{db: db, redis: rdb}
+./internal/repository/repository.go:}
+./internal/repository/repository.go:
+./internal/repository/repository.go:// User methods
+./internal/repository/repository.go:func (r *Repository) CreateUser(ctx context.Context, user *domain.User) error {
+./internal/repository/repository.go:	query := `INSERT INTO users (email, username, password_hash) VALUES (?, ?, ?)`
+./internal/repository/repository.go:	res, err := r.db.ExecContext(ctx, query, user.Email, user.Username, user.PasswordHash)
+./internal/repository/repository.go:	if err != nil {
+./internal/repository/repository.go:		return err
+./internal/repository/repository.go:	}
+./internal/repository/repository.go:	id, err := res.LastInsertId()
+./internal/repository/repository.go:	if err != nil {
+./internal/repository/repository.go:		return err
+./internal/repository/repository.go:	}
+./internal/repository/repository.go:	user.ID = id
+./internal/repository/repository.go:	return nil
+./internal/repository/repository.go:}
+./internal/repository/repository.go:
+./internal/repository/repository.go:func (r *Repository) GetUserByUsername(ctx context.Context, username string) (*domain.User, error) {
+./internal/repository/repository.go:	var user domain.User
+./internal/repository/repository.go:	err := r.db.GetContext(ctx, &user, `SELECT * FROM users WHERE username = ?`, username)
+./internal/repository/repository.go:	if err != nil {
+./internal/repository/repository.go:		if errors.Is(err, sql.ErrNoRows) {
+./internal/repository/repository.go:			return nil, nil
+./internal/repository/repository.go:		}
+./internal/repository/repository.go:		return nil, err
+./internal/repository/repository.go:	}
+./internal/repository/repository.go:	return &user, nil
+./internal/repository/repository.go:}
+./internal/repository/repository.go:
+./internal/repository/repository.go:func (r *Repository) GetUserByID(ctx context.Context, id int64) (*domain.User, error) {
+./internal/repository/repository.go:	var user domain.User
+./internal/repository/repository.go:	err := r.db.GetContext(ctx, &user, `SELECT * FROM users WHERE id = ?`, id)
+./internal/repository/repository.go:	if err != nil {
+./internal/repository/repository.go:		if errors.Is(err, sql.ErrNoRows) {
+./internal/repository/repository.go:			return nil, nil
+./internal/repository/repository.go:		}
+./internal/repository/repository.go:		return nil, err
+./internal/repository/repository.go:	}
+./internal/repository/repository.go:	return &user, nil
+./internal/repository/repository.go:}
+./internal/repository/repository.go:
+./internal/repository/repository.go:// Refresh Token methods (Redis)
+./internal/repository/repository.go:func (r *Repository) StoreRefreshToken(ctx context.Context, token string, userID int64, ttl time.Duration) error {
+./internal/repository/repository.go:	return r.redis.Set(ctx, "rt:"+token, userID, ttl).Err()
+./internal/repository/repository.go:}
+./internal/repository/repository.go:
+./internal/repository/repository.go:func (r *Repository) GetUserIDByRefreshToken(ctx context.Context, token string) (int64, error) {
+./internal/repository/repository.go:	return r.redis.Get(ctx, "rt:"+token).Int64()
+./internal/repository/repository.go:}
+./internal/repository/repository.go:
+./internal/repository/repository.go:func (r *Repository) DeleteRefreshToken(ctx context.Context, token string) error {
+./internal/repository/repository.go:	return r.redis.Del(ctx, "rt:"+token).Err()
+./internal/repository/repository.go:}
+./internal/repository/repository.go:
+./internal/repository/repository.go:// Team methods
+./internal/repository/repository.go:func (r *Repository) CreateTeam(ctx context.Context, team *domain.Team) error {
+./internal/repository/repository.go:	tx, err := r.db.BeginTxx(ctx, nil)
+./internal/repository/repository.go:	if err != nil {
+./internal/repository/repository.go:		return err
+./internal/repository/repository.go:	}
+./internal/repository/repository.go:	defer tx.Rollback()
+./internal/repository/repository.go:
+./internal/repository/repository.go:	res, err := tx.ExecContext(ctx, `INSERT INTO teams (name, created_by) VALUES (?, ?)`, team.Name, team.CreatedBy)
+./internal/repository/repository.go:	if err != nil {
+./internal/repository/repository.go:		return err
+./internal/repository/repository.go:	}
+./internal/repository/repository.go:	teamID, _ := res.LastInsertId()
+./internal/repository/repository.go:	team.ID = teamID
+./internal/repository/repository.go:
+./internal/repository/repository.go:	_, err = tx.ExecContext(ctx, `INSERT INTO team_members (team_id, user_id, role) VALUES (?, ?, 'owner')`, teamID, team.CreatedBy)
+./internal/repository/repository.go:	if err != nil {
+./internal/repository/repository.go:		return err
+./internal/repository/repository.go:	}
+./internal/repository/repository.go:
+./internal/repository/repository.go:	return tx.Commit()
+./internal/repository/repository.go:}
+./internal/repository/repository.go:
+./internal/repository/repository.go:func (r *Repository) GetUserTeams(ctx context.Context, userID int64) ([]domain.Team, error) {
+./internal/repository/repository.go:	var teams []domain.Team
+./internal/repository/repository.go:	query := `
+./internal/repository/repository.go:		SELECT t.* FROM teams t
+./internal/repository/repository.go:		JOIN team_members tm ON t.id = tm.team_id
+./internal/repository/repository.go:		WHERE tm.user_id = ?`
+./internal/repository/repository.go:	err := r.db.SelectContext(ctx, &teams, query, userID)
+./internal/repository/repository.go:	return teams, err
+./internal/repository/repository.go:}
+./internal/repository/repository.go:
+./internal/repository/repository.go:func (r *Repository) InviteToTeam(ctx context.Context, teamID, userID int64, role string) error {
+./internal/repository/repository.go:	_, err := r.db.ExecContext(ctx, `INSERT INTO team_members (team_id, user_id, role) VALUES (?, ?, ?)`, teamID, userID, role)
+./internal/repository/repository.go:	return err
+./internal/repository/repository.go:}
+./internal/repository/repository.go:
+./internal/repository/repository.go:func (r *Repository) GetTeamMemberRole(ctx context.Context, teamID, userID int64) (string, error) {
+./internal/repository/repository.go:	var role string
+./internal/repository/repository.go:	err := r.db.GetContext(ctx, &role, `SELECT role FROM team_members WHERE team_id = ? AND user_id = ?`, teamID, userID)
+./internal/repository/repository.go:	if errors.Is(err, sql.ErrNoRows) {
+./internal/repository/repository.go:		return "", nil
+./internal/repository/repository.go:	}
+./internal/repository/repository.go:	return role, err
+./internal/repository/repository.go:}
+./internal/repository/repository.go:
+./internal/repository/repository.go:// Task methods
+./internal/repository/repository.go:func (r *Repository) CreateTask(ctx context.Context, task *domain.Task) error {
+./internal/repository/repository.go:	query := `INSERT INTO tasks (team_id, title, description, status, assignee_id, created_by) VALUES (?, ?, ?, ?, ?, ?)`
+./internal/repository/repository.go:	res, err := r.db.ExecContext(ctx, query, task.TeamID, task.Title, task.Description, task.Status, task.AssigneeID, task.CreatedBy)
+./internal/repository/repository.go:	if err != nil {
+./internal/repository/repository.go:		return err
+./internal/repository/repository.go:	}
+./internal/repository/repository.go:	id, _ := res.LastInsertId()
+./internal/repository/repository.go:	task.ID = id
+./internal/repository/repository.go:
+./internal/repository/repository.go:	// Invalidate cache
+./internal/repository/repository.go:	r.redis.Del(ctx, fmt.Sprintf("team_tasks:%d", task.TeamID))
+./internal/repository/repository.go:	return nil
+./internal/repository/repository.go:}
+./internal/repository/repository.go:
+./internal/repository/repository.go:func (r *Repository) GetTasks(ctx context.Context, teamID int64, status string, assigneeID *int64, limit, offset int) ([]domain.Task, error) {
+./internal/repository/repository.go:	// Try cache first if no filters
+./internal/repository/repository.go:	cacheKey := fmt.Sprintf("team_tasks:%d", teamID)
+./internal/repository/repository.go:	if status == "" && assigneeID == nil && offset == 0 {
+./internal/repository/repository.go:		val, err := r.redis.Get(ctx, cacheKey).Result()
+./internal/repository/repository.go:		if err == nil {
+./internal/repository/repository.go:			var tasks []domain.Task
+./internal/repository/repository.go:			if json.Unmarshal([]byte(val), &tasks) == nil {
+./internal/repository/repository.go:				return tasks, nil
+./internal/repository/repository.go:			}
+./internal/repository/repository.go:		}
+./internal/repository/repository.go:	}
+./internal/repository/repository.go:
+./internal/repository/repository.go:	query := `SELECT * FROM tasks WHERE team_id = ?`
+./internal/repository/repository.go:	args := []interface{}{teamID}
+./internal/repository/repository.go:
+./internal/repository/repository.go:	if status != "" {
+./internal/repository/repository.go:		query += ` AND status = ?`
+./internal/repository/repository.go:		args = append(args, status)
+./internal/repository/repository.go:	}
+./internal/repository/repository.go:	if assigneeID != nil {
+./internal/repository/repository.go:		query += ` AND assignee_id = ?`
+./internal/repository/repository.go:		args = append(args, *assigneeID)
+./internal/repository/repository.go:	}
+./internal/repository/repository.go:	query += ` ORDER BY created_at DESC LIMIT ? OFFSET ?`
+./internal/repository/repository.go:	args = append(args, limit, offset)
+./internal/repository/repository.go:
+./internal/repository/repository.go:	var tasks []domain.Task
+./internal/repository/repository.go:	err := r.db.SelectContext(ctx, &tasks, query, args...)
+./internal/repository/repository.go:
+./internal/repository/repository.go:	// Кешируем только первую страницу
+./internal/repository/repository.go:	if err == nil && status == "" && assigneeID == nil && offset == 0 {
+./internal/repository/repository.go:		data, _ := json.Marshal(tasks)
+./internal/repository/repository.go:		r.redis.Set(ctx, cacheKey, data, 5*time.Minute)
+./internal/repository/repository.go:	}
+./internal/repository/repository.go:
+./internal/repository/repository.go:	return tasks, err
+./internal/repository/repository.go:}
+./internal/repository/repository.go:
+./internal/repository/repository.go:func (r *Repository) UpdateTask(ctx context.Context, taskID int64, newStatus string, changedBy int64) error {
+./internal/repository/repository.go:	tx, err := r.db.BeginTxx(ctx, nil)
+./internal/repository/repository.go:	if err != nil {
+./internal/repository/repository.go:		return err
+./internal/repository/repository.go:	}
+./internal/repository/repository.go:	defer tx.Rollback()
+./internal/repository/repository.go:
+./internal/repository/repository.go:	var oldStatus string
+./internal/repository/repository.go:	var teamID int64
+./internal/repository/repository.go:	err = tx.QueryRowContext(ctx, `SELECT status, team_id FROM tasks WHERE id = ? FOR UPDATE`, taskID).Scan(&oldStatus, &teamID)
+./internal/repository/repository.go:	if err != nil {
+./internal/repository/repository.go:		return err
+./internal/repository/repository.go:	}
+./internal/repository/repository.go:
+./internal/repository/repository.go:	if oldStatus == newStatus {
+./internal/repository/repository.go:		return nil
+./internal/repository/repository.go:	}
+./internal/repository/repository.go:
+./internal/repository/repository.go:	_, err = tx.ExecContext(ctx, `UPDATE tasks SET status = ? WHERE id = ?`, newStatus, taskID)
+./internal/repository/repository.go:	if err != nil {
+./internal/repository/repository.go:		return err
+./internal/repository/repository.go:	}
+./internal/repository/repository.go:
+./internal/repository/repository.go:	_, err = tx.ExecContext(ctx, `INSERT INTO task_history (task_id, changed_by, old_status, new_status) VALUES (?, ?, ?, ?)`, taskID, changedBy, oldStatus, newStatus)
+./internal/repository/repository.go:	if err != nil {
+./internal/repository/repository.go:		return err
+./internal/repository/repository.go:	}
+./internal/repository/repository.go:
+./internal/repository/repository.go:	err = tx.Commit()
+./internal/repository/repository.go:	if err == nil {
+./internal/repository/repository.go:		r.redis.Del(ctx, fmt.Sprintf("team_tasks:%d", teamID))
+./internal/repository/repository.go:	}
+./internal/repository/repository.go:	return err
+./internal/repository/repository.go:}
+./internal/repository/repository.go:
+./internal/repository/repository.go:func (r *Repository) GetTaskHistory(ctx context.Context, taskID int64) ([]domain.TaskHistory, error) {
+./internal/repository/repository.go:	var history []domain.TaskHistory
+./internal/repository/repository.go:	err := r.db.SelectContext(ctx, &history, `SELECT * FROM task_history WHERE task_id = ? ORDER BY changed_at DESC`, taskID)
+./internal/repository/repository.go:	return history, err
+./internal/repository/repository.go:}
+./internal/repository/repository.go:
+./internal/repository/repository.go:func (r *Repository) GetTaskByID(ctx context.Context, taskID int64) (*domain.Task, error) {
+./internal/repository/repository.go:	var task domain.Task
+./internal/repository/repository.go:	err := r.db.GetContext(ctx, &task, `SELECT * FROM tasks WHERE id = ?`, taskID)
+./internal/repository/repository.go:	if err != nil {
+./internal/repository/repository.go:		if errors.Is(err, sql.ErrNoRows) {
+./internal/repository/repository.go:			return nil, nil
+./internal/repository/repository.go:		}
+./internal/repository/repository.go:		return nil, err
+./internal/repository/repository.go:	}
+./internal/repository/repository.go:	return &task, nil
+./internal/repository/repository.go:}
+./internal/repository/repository.go:
+./internal/repository/repository.go:// Comment methods
+./internal/repository/repository.go:func (r *Repository) CreateComment(ctx context.Context, comment *domain.Comment) error {
+./internal/repository/repository.go:	query := `INSERT INTO task_comments (task_id, user_id, content) VALUES (?, ?, ?)`
+./internal/repository/repository.go:	res, err := r.db.ExecContext(ctx, query, comment.TaskID, comment.UserID, comment.Content)
+./internal/repository/repository.go:	if err != nil {
+./internal/repository/repository.go:		return err
+./internal/repository/repository.go:	}
+./internal/repository/repository.go:	id, _ := res.LastInsertId()
+./internal/repository/repository.go:	comment.ID = id
+./internal/repository/repository.go:	return nil
+./internal/repository/repository.go:}
+./internal/repository/repository.go:
+./internal/repository/repository.go:func (r *Repository) GetTaskComments(ctx context.Context, taskID int64) ([]domain.Comment, error) {
+./internal/repository/repository.go:	var comments []domain.Comment
+./internal/repository/repository.go:	err := r.db.SelectContext(ctx, &comments, `SELECT * FROM task_comments WHERE task_id = ? ORDER BY created_at ASC`, taskID)
+./internal/repository/repository.go:	return comments, err
+./internal/repository/repository.go:}
+./internal/repository/repository.go:
+./internal/repository/repository.go:// Analytics (Complex SQL)
+./internal/repository/repository.go:func (r *Repository) GetTeamStats(ctx context.Context) ([]map[string]interface{}, error) {
+./internal/repository/repository.go:	query := `
+./internal/repository/repository.go:		SELECT 
+./internal/repository/repository.go:			t.name,
+./internal/repository/repository.go:			COUNT(DISTINCT tm.user_id) as member_count,
+./internal/repository/repository.go:			COUNT(DISTINCT CASE WHEN tk.status = 'done' AND tk.updated_at >= NOW() - INTERVAL 7 DAY THEN tk.id END) as done_tasks_count
+./internal/repository/repository.go:		FROM teams t
+./internal/repository/repository.go:		LEFT JOIN team_members tm ON t.id = tm.team_id
+./internal/repository/repository.go:		LEFT JOIN tasks tk ON t.id = tk.team_id
+./internal/repository/repository.go:		GROUP BY t.id, t.name
+./internal/repository/repository.go:	`
+./internal/repository/repository.go:	var results []map[string]interface{}
+./internal/repository/repository.go:	rows, err := r.db.QueryxContext(ctx, query)
+./internal/repository/repository.go:	if err != nil {
+./internal/repository/repository.go:		return nil, err
+./internal/repository/repository.go:	}
+./internal/repository/repository.go:	defer rows.Close()
+./internal/repository/repository.go:	for rows.Next() {
+./internal/repository/repository.go:		m := make(map[string]interface{})
+./internal/repository/repository.go:		if err := rows.MapScan(m); err != nil {
+./internal/repository/repository.go:			return nil, err
+./internal/repository/repository.go:		}
+./internal/repository/repository.go:
+./internal/repository/repository.go:		// Convert []byte to string for JSON serialization
+./internal/repository/repository.go:		for k, v := range m {
+./internal/repository/repository.go:			if b, ok := v.([]byte); ok {
+./internal/repository/repository.go:				m[k] = string(b)
+./internal/repository/repository.go:			}
+./internal/repository/repository.go:		}
+./internal/repository/repository.go:		results = append(results, m)
+./internal/repository/repository.go:	}
+./internal/repository/repository.go:	return results, nil
+./internal/repository/repository.go:}
+./internal/repository/repository.go:
+./internal/repository/repository.go:func (r *Repository) GetTopUsersPerTeam(ctx context.Context) ([]map[string]interface{}, error) {
+./internal/repository/repository.go:	query := `
+./internal/repository/repository.go:		WITH RankedUsers AS (
+./internal/repository/repository.go:			SELECT 
+./internal/repository/repository.go:				team_id,
+./internal/repository/repository.go:				created_by as user_id,
+./internal/repository/repository.go:				COUNT(id) as task_count,
+./internal/repository/repository.go:				ROW_NUMBER() OVER(PARTITION BY team_id ORDER BY COUNT(id) DESC) as rnk
+./internal/repository/repository.go:			FROM tasks
+./internal/repository/repository.go:			WHERE created_at >= NOW() - INTERVAL 1 MONTH
+./internal/repository/repository.go:			GROUP BY team_id, created_by
+./internal/repository/repository.go:		)
+./internal/repository/repository.go:		SELECT team_id, user_id, task_count
+./internal/repository/repository.go:		FROM RankedUsers
+./internal/repository/repository.go:		WHERE rnk <= 3
+./internal/repository/repository.go:	`
+./internal/repository/repository.go:	var results []map[string]interface{}
+./internal/repository/repository.go:	rows, err := r.db.QueryxContext(ctx, query)
+./internal/repository/repository.go:	if err != nil {
+./internal/repository/repository.go:		return nil, err
+./internal/repository/repository.go:	}
+./internal/repository/repository.go:	defer rows.Close()
+./internal/repository/repository.go:	for rows.Next() {
+./internal/repository/repository.go:		m := make(map[string]interface{})
+./internal/repository/repository.go:		if err := rows.MapScan(m); err != nil {
+./internal/repository/repository.go:			return nil, err
+./internal/repository/repository.go:		}
+./internal/repository/repository.go:		for k, v := range m {
+./internal/repository/repository.go:			if b, ok := v.([]byte); ok {
+./internal/repository/repository.go:				m[k] = string(b)
+./internal/repository/repository.go:			}
+./internal/repository/repository.go:		}
+./internal/repository/repository.go:		results = append(results, m)
+./internal/repository/repository.go:	}
+./internal/repository/repository.go:	return results, nil
+./internal/repository/repository.go:}
+./internal/repository/repository.go:
+./internal/repository/repository.go:func (r *Repository) GetTasksWithExternalAssignee(ctx context.Context) ([]domain.Task, error) {
+./internal/repository/repository.go:	query := `
+./internal/repository/repository.go:		SELECT t.*
+./internal/repository/repository.go:		FROM tasks t
+./internal/repository/repository.go:		LEFT JOIN team_members tm ON t.team_id = tm.team_id AND t.assignee_id = tm.user_id
+./internal/repository/repository.go:		WHERE t.assignee_id IS NOT NULL AND tm.user_id IS NULL
+./internal/repository/repository.go:	`
+./internal/repository/repository.go:	var tasks []domain.Task
+./internal/repository/repository.go:	err := r.db.SelectContext(ctx, &tasks, query)
+./internal/repository/repository.go:	return tasks, err
+./internal/repository/repository.go:}
+./internal/repository/repository_test.go:package repository
+./internal/repository/repository_test.go:
+./internal/repository/repository_test.go:import (
+./internal/repository/repository_test.go:	"context"
+./internal/repository/repository_test.go:	"os"
+./internal/repository/repository_test.go:	"path/filepath"
+./internal/repository/repository_test.go:	"strings"
+./internal/repository/repository_test.go:	"testing"
+./internal/repository/repository_test.go:	"time"
+./internal/repository/repository_test.go:
+./internal/repository/repository_test.go:	"github.com/go-sql-driver/mysql"
+./internal/repository/repository_test.go:	"github.com/jmoiron/sqlx"
+./internal/repository/repository_test.go:	"github.com/redis/go-redis/v9"
+./internal/repository/repository_test.go:	"github.com/stretchr/testify/assert"
+./internal/repository/repository_test.go:	"github.com/stretchr/testify/require"
+./internal/repository/repository_test.go:	"github.com/testcontainers/testcontainers-go"
+./internal/repository/repository_test.go:	testmysql "github.com/testcontainers/testcontainers-go/modules/mysql"
+./internal/repository/repository_test.go:	testredis "github.com/testcontainers/testcontainers-go/modules/redis"
+./internal/repository/repository_test.go:	"github.com/xela07ax/luna-tasks-sbs/internal/domain"
+./internal/repository/repository_test.go:)
+./internal/repository/repository_test.go:
+./internal/repository/repository_test.go:// =========================================================================
+./internal/repository/repository_test.go:// ХЕЛПЕРЫ ДЛЯ ЛОКАЛЬНОЙ РАЗРАБОТКИ (Docker Compose)
+./internal/repository/repository_test.go:// =========================================================================
+./internal/repository/repository_test.go:
+./internal/repository/repository_test.go:func getEnvOrDefault(key, fallback string) string {
+./internal/repository/repository_test.go:	if val := os.Getenv(key); val != "" {
+./internal/repository/repository_test.go:		return val
+./internal/repository/repository_test.go:	}
+./internal/repository/repository_test.go:	return fallback
+./internal/repository/repository_test.go:}
+./internal/repository/repository_test.go:
+./internal/repository/repository_test.go:func getTestDSN() string {
+./internal/repository/repository_test.go:	cfg := mysql.Config{
+./internal/repository/repository_test.go:		User:                 getEnvOrDefault("TEST_DB_USER", "test_user"),
+./internal/repository/repository_test.go:		Passwd:               getEnvOrDefault("TEST_DB_PASS", "test_pass"),
+./internal/repository/repository_test.go:		Net:                  "tcp",
+./internal/repository/repository_test.go:		Addr:                 getEnvOrDefault("TEST_DB_HOST", "localhost") + ":" + getEnvOrDefault("TEST_DB_PORT", "3306"),
+./internal/repository/repository_test.go:		DBName:               getEnvOrDefault("TEST_DB_NAME", "luna_tasks_test"),
+./internal/repository/repository_test.go:		ParseTime:            true,
+./internal/repository/repository_test.go:		MultiStatements:      true,
+./internal/repository/repository_test.go:		AllowNativePasswords: true,
+./internal/repository/repository_test.go:	}
+./internal/repository/repository_test.go:	return cfg.FormatDSN()
+./internal/repository/repository_test.go:}
+./internal/repository/repository_test.go:
+./internal/repository/repository_test.go:// setupLocalTestDB подключается к статичному Docker Compose (Быстро, удобно для дебага)
+./internal/repository/repository_test.go:func setupLocalTestDB(t *testing.T) (*sqlx.DB, *redis.Client, func()) {
+./internal/repository/repository_test.go:	t.Log("🚀 Использование локального окружения (Docker Compose)")
+./internal/repository/repository_test.go:	dsn := getTestDSN()
+./internal/repository/repository_test.go:
+./internal/repository/repository_test.go:	db, err := sqlx.Connect("mysql", dsn)
+./internal/repository/repository_test.go:	require.NoError(t, err, "Не удалось подключиться к локальной MySQL. Запущен ли docker-compose.test.yml?")
+./internal/repository/repository_test.go:
+./internal/repository/repository_test.go:	redisHost := getEnvOrDefault("TEST_REDIS_HOST", "localhost") + ":" + getEnvOrDefault("TEST_REDIS_PORT", "6379")
+./internal/repository/repository_test.go:	rdb := redis.NewClient(&redis.Options{Addr: redisHost})
+./internal/repository/repository_test.go:
+./internal/repository/repository_test.go:	err = rdb.Ping(context.Background()).Err()
+./internal/repository/repository_test.go:	require.NoError(t, err, "Не удалось подключиться к локальному Redis")
+./internal/repository/repository_test.go:
+./internal/repository/repository_test.go:	runMigrations(t, db)
+./internal/repository/repository_test.go:	cleanDB(t, db)
+./internal/repository/repository_test.go:	rdb.FlushAll(context.Background())
+./internal/repository/repository_test.go:
+./internal/repository/repository_test.go:	cleanup := func() {
+./internal/repository/repository_test.go:		db.Close()
+./internal/repository/repository_test.go:		rdb.Close()
+./internal/repository/repository_test.go:	}
+./internal/repository/repository_test.go:	return db, rdb, cleanup
+./internal/repository/repository_test.go:}
+./internal/repository/repository_test.go:
+./internal/repository/repository_test.go:func runMigrations(t *testing.T, db *sqlx.DB) {
+./internal/repository/repository_test.go:	files := []string{
+./internal/repository/repository_test.go:		filepath.Join("..", "..", "migrations", "000001_init.up.sql"),
+./internal/repository/repository_test.go:		filepath.Join("..", "..", "migrations", "000002_add_read_indexes.up.sql"),
+./internal/repository/repository_test.go:	}
+./internal/repository/repository_test.go:
+./internal/repository/repository_test.go:	for _, file := range files {
+./internal/repository/repository_test.go:		content, err := os.ReadFile(file)
+./internal/repository/repository_test.go:		require.NoError(t, err, "Не удалось прочитать файл миграции: "+file)
+./internal/repository/repository_test.go:
+./internal/repository/repository_test.go:		_, err = db.Exec(string(content))
+./internal/repository/repository_test.go:		if err != nil && !strings.Contains(err.Error(), "already exists") && !strings.Contains(err.Error(), "Duplicate key name") {
+./internal/repository/repository_test.go:			t.Fatalf("Ошибка выполнения миграции %s: %v", file, err)
+./internal/repository/repository_test.go:		}
+./internal/repository/repository_test.go:	}
+./internal/repository/repository_test.go:}
+./internal/repository/repository_test.go:
+./internal/repository/repository_test.go:func cleanDB(t *testing.T, db *sqlx.DB) {
+./internal/repository/repository_test.go:	queries := []string{
+./internal/repository/repository_test.go:		"SET FOREIGN_KEY_CHECKS = 0;",
+./internal/repository/repository_test.go:		"TRUNCATE TABLE task_comments;",
+./internal/repository/repository_test.go:		"TRUNCATE TABLE task_history;",
+./internal/repository/repository_test.go:		"TRUNCATE TABLE tasks;",
+./internal/repository/repository_test.go:		"TRUNCATE TABLE team_members;",
+./internal/repository/repository_test.go:		"TRUNCATE TABLE teams;",
+./internal/repository/repository_test.go:		"TRUNCATE TABLE users;",
+./internal/repository/repository_test.go:		"SET FOREIGN_KEY_CHECKS = 1;",
+./internal/repository/repository_test.go:	}
+./internal/repository/repository_test.go:	for _, q := range queries {
+./internal/repository/repository_test.go:		_, err := db.Exec(q)
+./internal/repository/repository_test.go:		require.NoError(t, err)
+./internal/repository/repository_test.go:	}
+./internal/repository/repository_test.go:}
+./internal/repository/repository_test.go:
+./internal/repository/repository_test.go:// =========================================================================
+./internal/repository/repository_test.go:// ХЕЛПЕРЫ ДЛЯ CI/CD (Testcontainers - Требование из ТЗ)
+./internal/repository/repository_test.go:// =========================================================================
+./internal/repository/repository_test.go:
+./internal/repository/repository_test.go:// setupTestcontainersDB поднимает эфемерные контейнеры (Изолированно, надежно для CI)
+./internal/repository/repository_test.go:func setupTestcontainersDB(t *testing.T) (*sqlx.DB, *redis.Client, func()) {
+./internal/repository/repository_test.go:	t.Log("🐳 Использование Testcontainers (CI Environment)")
+./internal/repository/repository_test.go:	ctx := context.Background()
+./internal/repository/repository_test.go:
+./internal/repository/repository_test.go:	mysqlContainer, err := testmysql.RunContainer(ctx,
+./internal/repository/repository_test.go:		testcontainers.WithImage("mysql:8.0"),
+./internal/repository/repository_test.go:		testmysql.WithDatabase("luna_tasks"),
+./internal/repository/repository_test.go:		testmysql.WithUsername("test_user"),
+./internal/repository/repository_test.go:		testmysql.WithPassword("test_pass"),
+./internal/repository/repository_test.go:		testmysql.WithScripts(
+./internal/repository/repository_test.go:			filepath.Join("..", "..", "migrations", "000001_init.up.sql"),
+./internal/repository/repository_test.go:			filepath.Join("..", "..", "migrations", "000002_add_read_indexes.up.sql"),
+./internal/repository/repository_test.go:		),
+./internal/repository/repository_test.go:	)
+./internal/repository/repository_test.go:	require.NoError(t, err)
+./internal/repository/repository_test.go:
+./internal/repository/repository_test.go:	dsn, err := mysqlContainer.ConnectionString(ctx, "parseTime=true&multiStatements=true")
+./internal/repository/repository_test.go:	require.NoError(t, err)
+./internal/repository/repository_test.go:
+./internal/repository/repository_test.go:	db, err := sqlx.Connect("mysql", dsn)
+./internal/repository/repository_test.go:	require.NoError(t, err)
+./internal/repository/repository_test.go:
+./internal/repository/repository_test.go:	redisContainer, err := testredis.RunContainer(ctx,
+./internal/repository/repository_test.go:		testcontainers.WithImage("redis:7-alpine"),
+./internal/repository/repository_test.go:	)
+./internal/repository/repository_test.go:	require.NoError(t, err)
+./internal/repository/repository_test.go:
+./internal/repository/repository_test.go:	redisURI, err := redisContainer.ConnectionString(ctx)
+./internal/repository/repository_test.go:	require.NoError(t, err)
+./internal/repository/repository_test.go:
+./internal/repository/repository_test.go:	rdb := redis.NewClient(&redis.Options{Addr: redisURI})
+./internal/repository/repository_test.go:
+./internal/repository/repository_test.go:	cleanup := func() {
+./internal/repository/repository_test.go:		db.Close()
+./internal/repository/repository_test.go:		rdb.Close()
+./internal/repository/repository_test.go:		mysqlContainer.Terminate(ctx)
+./internal/repository/repository_test.go:		redisContainer.Terminate(ctx)
+./internal/repository/repository_test.go:	}
+./internal/repository/repository_test.go:	return db, rdb, cleanup
+./internal/repository/repository_test.go:}
+./internal/repository/repository_test.go:
+./internal/repository/repository_test.go:func TestRepository_Integration(t *testing.T) {
+./internal/repository/repository_test.go:	if testing.Short() {
+./internal/repository/repository_test.go:		t.Skip("Skipping integration tests in short mode")
+./internal/repository/repository_test.go:	}
+./internal/repository/repository_test.go:
+./internal/repository/repository_test.go:	var db *sqlx.DB
+./internal/repository/repository_test.go:	var rdb *redis.Client
+./internal/repository/repository_test.go:	var cleanup func()
+./internal/repository/repository_test.go:
+./internal/repository/repository_test.go:	// 💡 МАГИЯ ЗДЕСЬ: Переключаем инфраструктуру в зависимости от окружения
+./internal/repository/repository_test.go:	if os.Getenv("CI") != "" {
+./internal/repository/repository_test.go:		db, rdb, cleanup = setupTestcontainersDB(t)
+./internal/repository/repository_test.go:	} else {
+./internal/repository/repository_test.go:		db, rdb, cleanup = setupLocalTestDB(t)
+./internal/repository/repository_test.go:	}
+./internal/repository/repository_test.go:	defer cleanup()
+./internal/repository/repository_test.go:
+./internal/repository/repository_test.go:	repo := NewRepository(db, rdb)
+./internal/repository/repository_test.go:	ctx := context.Background()
+./internal/repository/repository_test.go:
+./internal/repository/repository_test.go:	// =========================================================================
+./internal/repository/repository_test.go:	// 1. Тест: Создание пользователя
+./internal/repository/repository_test.go:	// =========================================================================
+./internal/repository/repository_test.go:	user := &domain.User{
+./internal/repository/repository_test.go:		Email:        "test@example.com",
+./internal/repository/repository_test.go:		Username:     "testuser",
+./internal/repository/repository_test.go:		PasswordHash: "hash",
+./internal/repository/repository_test.go:	}
+./internal/repository/repository_test.go:	err := repo.CreateUser(ctx, user)
+./internal/repository/repository_test.go:	require.NoError(t, err)
+./internal/repository/repository_test.go:	assert.NotZero(t, user.ID)
+./internal/repository/repository_test.go:
+./internal/repository/repository_test.go:	// =========================================================================
+./internal/repository/repository_test.go:	// 2. Тест: Получение пользователя
+./internal/repository/repository_test.go:	// =========================================================================
+./internal/repository/repository_test.go:	fetchedUser, err := repo.GetUserByUsername(ctx, "testuser")
+./internal/repository/repository_test.go:	require.NoError(t, err)
+./internal/repository/repository_test.go:	assert.Equal(t, user.ID, fetchedUser.ID)
+./internal/repository/repository_test.go:
+./internal/repository/repository_test.go:	// =========================================================================
+./internal/repository/repository_test.go:	// 3. Тест: Создание команды
+./internal/repository/repository_test.go:	// =========================================================================
+./internal/repository/repository_test.go:	team := &domain.Team{
+./internal/repository/repository_test.go:		Name:      "Test Team",
+./internal/repository/repository_test.go:		CreatedBy: user.ID,
+./internal/repository/repository_test.go:	}
+./internal/repository/repository_test.go:	err = repo.CreateTeam(ctx, team)
+./internal/repository/repository_test.go:	require.NoError(t, err)
+./internal/repository/repository_test.go:	assert.NotZero(t, team.ID)
+./internal/repository/repository_test.go:
+./internal/repository/repository_test.go:	// Проверяем, что создатель стал owner'ом
+./internal/repository/repository_test.go:	role, err := repo.GetTeamMemberRole(ctx, team.ID, user.ID)
+./internal/repository/repository_test.go:	require.NoError(t, err)
+./internal/repository/repository_test.go:	assert.Equal(t, "owner", role)
+./internal/repository/repository_test.go:
+./internal/repository/repository_test.go:	// =========================================================================
+./internal/repository/repository_test.go:	// 4. Тест: Создание задачи и проверка кеширования (Redis)
+./internal/repository/repository_test.go:	// =========================================================================
+./internal/repository/repository_test.go:	task := &domain.Task{
+./internal/repository/repository_test.go:		TeamID:      team.ID,
+./internal/repository/repository_test.go:		Title:       "Integration Task",
+./internal/repository/repository_test.go:		Description: "Test",
+./internal/repository/repository_test.go:		Status:      "todo",
+./internal/repository/repository_test.go:		CreatedBy:   user.ID,
+./internal/repository/repository_test.go:	}
+./internal/repository/repository_test.go:	err = repo.CreateTask(ctx, task)
+./internal/repository/repository_test.go:	require.NoError(t, err)
+./internal/repository/repository_test.go:
+./internal/repository/repository_test.go:	// Запрашиваем задачи (должен быть промах кеша -> запрос в БД -> сохранение в Redis)
+./internal/repository/repository_test.go:	tasks, err := repo.GetTasks(ctx, team.ID, "", nil, 10, 0)
+./internal/repository/repository_test.go:	require.NoError(t, err)
+./internal/repository/repository_test.go:	assert.Len(t, tasks, 1)
+./internal/repository/repository_test.go:
+./internal/repository/repository_test.go:	// Проверяем, что данные появились в Redis
+./internal/repository/repository_test.go:	time.Sleep(100 * time.Millisecond) // Даем горутине/Redis время на запись
+./internal/repository/repository_test.go:	cacheKey := "team_tasks:1"         // team.ID = 1
+./internal/repository/repository_test.go:	val, err := rdb.Get(ctx, cacheKey).Result()
+./internal/repository/repository_test.go:	require.NoError(t, err)
+./internal/repository/repository_test.go:	assert.Contains(t, val, "Integration Task")
+./internal/repository/repository_test.go:
+./internal/repository/repository_test.go:	// =========================================================================
+./internal/repository/repository_test.go:	// 5. Тест: Обновление задачи и запись в историю (Audit)
+./internal/repository/repository_test.go:	// =========================================================================
+./internal/repository/repository_test.go:	err = repo.UpdateTask(ctx, task.ID, "done", user.ID)
+./internal/repository/repository_test.go:	require.NoError(t, err)
+./internal/repository/repository_test.go:
+./internal/repository/repository_test.go:	history, err := repo.GetTaskHistory(ctx, task.ID)
+./internal/repository/repository_test.go:	require.NoError(t, err)
+./internal/repository/repository_test.go:	assert.Len(t, history, 1)
+./internal/repository/repository_test.go:	assert.Equal(t, "todo", history[0].OldStatus)
+./internal/repository/repository_test.go:	assert.Equal(t, "done", history[0].NewStatus)
+./internal/repository/repository_test.go:
+./internal/repository/repository_test.go:	// =========================================================================
+./internal/repository/repository_test.go:	// 6. Тест: Сложный SQL (GetTeamStats)
+./internal/repository/repository_test.go:	// =========================================================================
+./internal/repository/repository_test.go:	stats, err := repo.GetTeamStats(ctx)
+./internal/repository/repository_test.go:	require.NoError(t, err)
+./internal/repository/repository_test.go:	assert.Len(t, stats, 1)
+./internal/repository/repository_test.go:	assert.Equal(t, "Test Team", stats[0]["name"])
+./internal/repository/repository_test.go:
+./internal/repository/repository_test.go:	// В зависимости от драйвера MySQL, COUNT() может возвращать string или []byte.
+./internal/repository/repository_test.go:	// В репозитории мы принудительно кастим []byte к string для JSON.
+./internal/repository/repository_test.go:	assert.Equal(t, "1", stats[0]["member_count"])
+./internal/repository/repository_test.go:	assert.Equal(t, "1", stats[0]["done_tasks_count"])
+./internal/repository/repository_test.go:}
+./internal/service/service.go:package service
+./internal/service/service.go:
+./internal/service/service.go:import (
+./internal/service/service.go:	"context"
+./internal/service/service.go:	"crypto/rand"
+./internal/service/service.go:	"encoding/base64"
+./internal/service/service.go:	"errors"
+./internal/service/service.go:	"time"
+./internal/service/service.go:
+./internal/service/service.go:	"github.com/xela07ax/luna-tasks-sbs/internal/domain"
+./internal/service/service.go:	"github.com/xela07ax/luna-tasks-sbs/internal/infra"
+./internal/service/service.go:	"golang.org/x/crypto/bcrypt"
+./internal/service/service.go:)
+./internal/service/service.go:
+./internal/service/service.go:// Repository описывает контракт для работы с базой данных (позволяет мокать в тестах)
+./internal/service/service.go:type Repository interface {
+./internal/service/service.go:	CreateUser(ctx context.Context, user *domain.User) error
+./internal/service/service.go:	GetUserByUsername(ctx context.Context, username string) (*domain.User, error)
+./internal/service/service.go:	GetUserByID(ctx context.Context, id int64) (*domain.User, error)
+./internal/service/service.go:	StoreRefreshToken(ctx context.Context, token string, userID int64, ttl time.Duration) error
+./internal/service/service.go:	GetUserIDByRefreshToken(ctx context.Context, token string) (int64, error)
+./internal/service/service.go:	DeleteRefreshToken(ctx context.Context, token string) error
+./internal/service/service.go:	CreateTeam(ctx context.Context, team *domain.Team) error
+./internal/service/service.go:	GetUserTeams(ctx context.Context, userID int64) ([]domain.Team, error)
+./internal/service/service.go:	InviteToTeam(ctx context.Context, teamID, userID int64, role string) error
+./internal/service/service.go:	GetTeamMemberRole(ctx context.Context, teamID, userID int64) (string, error)
+./internal/service/service.go:	CreateTask(ctx context.Context, task *domain.Task) error
+./internal/service/service.go:	GetTasks(ctx context.Context, teamID int64, status string, assigneeID *int64, limit, offset int) ([]domain.Task, error)
+./internal/service/service.go:	UpdateTask(ctx context.Context, taskID int64, newStatus string, changedBy int64) error
+./internal/service/service.go:	GetTaskHistory(ctx context.Context, taskID int64) ([]domain.TaskHistory, error)
+./internal/service/service.go:	GetTaskByID(ctx context.Context, taskID int64) (*domain.Task, error)
+./internal/service/service.go:	CreateComment(ctx context.Context, comment *domain.Comment) error
+./internal/service/service.go:	GetTaskComments(ctx context.Context, taskID int64) ([]domain.Comment, error)
+./internal/service/service.go:	GetTeamStats(ctx context.Context) ([]map[string]interface{}, error)
+./internal/service/service.go:	GetTopUsersPerTeam(ctx context.Context) ([]map[string]interface{}, error)
+./internal/service/service.go:	GetTasksWithExternalAssignee(ctx context.Context) ([]domain.Task, error)
+./internal/service/service.go:}
+./internal/service/service.go:
+./internal/service/service.go:// TokenGenerator описывает контракт для генерации JWT (позволяет мокать в тестах)
+./internal/service/service.go:type TokenGenerator interface {
+./internal/service/service.go:	GenerateToken(userID int64, username string) (string, error)
+./internal/service/service.go:}
+./internal/service/service.go:
+./internal/service/service.go:type Service struct {
+./internal/service/service.go:	repo       Repository
+./internal/service/service.go:	jwt        TokenGenerator
+./internal/service/service.go:	accessTTL  time.Duration
+./internal/service/service.go:	refreshTTL time.Duration
+./internal/service/service.go:}
+./internal/service/service.go:
+./internal/service/service.go:func NewService(repo Repository, jwt TokenGenerator, accessTTL, refreshTTL time.Duration) *Service {
+./internal/service/service.go:	return &Service{
+./internal/service/service.go:		repo:       repo,
+./internal/service/service.go:		jwt:        jwt,
+./internal/service/service.go:		accessTTL:  accessTTL,
+./internal/service/service.go:		refreshTTL: refreshTTL,
+./internal/service/service.go:	}
+./internal/service/service.go:}
+./internal/service/service.go:
+./internal/service/service.go:func generateSecureToken() string {
+./internal/service/service.go:	b := make([]byte, 32)
+./internal/service/service.go:	rand.Read(b)
+./internal/service/service.go:	return base64.URLEncoding.EncodeToString(b)
+./internal/service/service.go:}
+./internal/service/service.go:
+./internal/service/service.go:func (s *Service) issueTokens(ctx context.Context, userID int64, username string) (*domain.TokenPair, error) {
+./internal/service/service.go:	accessToken, err := s.jwt.GenerateToken(userID, username)
+./internal/service/service.go:	if err != nil {
+./internal/service/service.go:		return nil, err
+./internal/service/service.go:	}
+./internal/service/service.go:
+./internal/service/service.go:	refreshToken := generateSecureToken()
+./internal/service/service.go:	err = s.repo.StoreRefreshToken(ctx, refreshToken, userID, s.refreshTTL)
+./internal/service/service.go:	if err != nil {
+./internal/service/service.go:		return nil, err
+./internal/service/service.go:	}
+./internal/service/service.go:
+./internal/service/service.go:	return &domain.TokenPair{
+./internal/service/service.go:		AccessToken:  accessToken,
+./internal/service/service.go:		RefreshToken: refreshToken,
+./internal/service/service.go:		ExpiresIn:    int64(s.accessTTL.Seconds()),
+./internal/service/service.go:	}, nil
+./internal/service/service.go:}
+./internal/service/service.go:
+./internal/service/service.go:func (s *Service) Register(ctx context.Context, email, username, password string) error {
+./internal/service/service.go:	hash, err := bcrypt.GenerateFromPassword([]byte(password), bcrypt.DefaultCost)
+./internal/service/service.go:	if err != nil {
+./internal/service/service.go:		return err
+./internal/service/service.go:	}
+./internal/service/service.go:	user := &domain.User{
+./internal/service/service.go:		Email:        email,
+./internal/service/service.go:		Username:     username,
+./internal/service/service.go:		PasswordHash: string(hash),
+./internal/service/service.go:	}
+./internal/service/service.go:	return s.repo.CreateUser(ctx, user)
+./internal/service/service.go:}
+./internal/service/service.go:
+./internal/service/service.go:func (s *Service) Login(ctx context.Context, username, password string) (*domain.TokenPair, error) {
+./internal/service/service.go:	user, err := s.repo.GetUserByUsername(ctx, username)
+./internal/service/service.go:	if err != nil || user == nil {
+./internal/service/service.go:		return nil, errors.New("invalid credentials")
+./internal/service/service.go:	}
+./internal/service/service.go:	if err := bcrypt.CompareHashAndPassword([]byte(user.PasswordHash), []byte(password)); err != nil {
+./internal/service/service.go:		return nil, errors.New("invalid credentials")
+./internal/service/service.go:	}
+./internal/service/service.go:	return s.issueTokens(ctx, user.ID, user.Username)
+./internal/service/service.go:}
+./internal/service/service.go:
+./internal/service/service.go:func (s *Service) RefreshTokens(ctx context.Context, refreshToken string) (*domain.TokenPair, error) {
+./internal/service/service.go:	userID, err := s.repo.GetUserIDByRefreshToken(ctx, refreshToken)
+./internal/service/service.go:	if err != nil {
+./internal/service/service.go:		return nil, errors.New("invalid or expired refresh token")
+./internal/service/service.go:	}
+./internal/service/service.go:
+./internal/service/service.go:	user, err := s.repo.GetUserByID(ctx, userID)
+./internal/service/service.go:	if err != nil || user == nil {
+./internal/service/service.go:		return nil, errors.New("user not found")
+./internal/service/service.go:	}
+./internal/service/service.go:
+./internal/service/service.go:	// Token Rotation: удаляем старый рефреш токен
+./internal/service/service.go:	_ = s.repo.DeleteRefreshToken(ctx, refreshToken)
+./internal/service/service.go:
+./internal/service/service.go:	return s.issueTokens(ctx, user.ID, user.Username)
+./internal/service/service.go:}
+./internal/service/service.go:
+./internal/service/service.go:func (s *Service) Logout(ctx context.Context, refreshToken string) error {
+./internal/service/service.go:	return s.repo.DeleteRefreshToken(ctx, refreshToken)
+./internal/service/service.go:}
+./internal/service/service.go:
+./internal/service/service.go:func (s *Service) CreateTeam(ctx context.Context, name string, userID int64) (*domain.Team, error) {
+./internal/service/service.go:	team := &domain.Team{
+./internal/service/service.go:		Name:      name,
+./internal/service/service.go:		CreatedBy: userID,
+./internal/service/service.go:	}
+./internal/service/service.go:	err := s.repo.CreateTeam(ctx, team)
+./internal/service/service.go:	return team, err
+./internal/service/service.go:}
+./internal/service/service.go:
+./internal/service/service.go:func (s *Service) GetUserTeams(ctx context.Context, userID int64) ([]domain.Team, error) {
+./internal/service/service.go:	return s.repo.GetUserTeams(ctx, userID)
+./internal/service/service.go:}
+./internal/service/service.go:
+./internal/service/service.go:func (s *Service) InviteToTeam(ctx context.Context, teamID, inviterID, inviteeID int64) error {
+./internal/service/service.go:	role, err := s.repo.GetTeamMemberRole(ctx, teamID, inviterID)
+./internal/service/service.go:	if err != nil {
+./internal/service/service.go:		return err
+./internal/service/service.go:	}
+./internal/service/service.go:	if role != "owner" && role != "admin" {
+./internal/service/service.go:		return errors.New("insufficient permissions")
+./internal/service/service.go:	}
+./internal/service/service.go:	// Использование Circuit Breaker для вызова внешнего сервиса (Mock Email)
+./internal/service/service.go:	err = infra.EmailCircuitBreaker.Execute(func() error {
+./internal/service/service.go:		// Mock sending email
+./internal/service/service.go:		return nil
+./internal/service/service.go:	})
+./internal/service/service.go:	if err != nil {
+./internal/service/service.go:		return errors.New("failed to send invite email")
+./internal/service/service.go:	}
+./internal/service/service.go:
+./internal/service/service.go:	return s.repo.InviteToTeam(ctx, teamID, inviteeID, "member")
+./internal/service/service.go:}
+./internal/service/service.go:
+./internal/service/service.go:func (s *Service) CreateTask(ctx context.Context, task *domain.Task, userID int64) error {
+./internal/service/service.go:	role, err := s.repo.GetTeamMemberRole(ctx, task.TeamID, userID)
+./internal/service/service.go:	if err != nil || role == "" {
+./internal/service/service.go:		return errors.New("user is not a member of the team")
+./internal/service/service.go:	}
+./internal/service/service.go:	task.CreatedBy = userID
+./internal/service/service.go:	return s.repo.CreateTask(ctx, task)
+./internal/service/service.go:}
+./internal/service/service.go:
+./internal/service/service.go:func (s *Service) GetTasks(ctx context.Context, teamID int64, status string, assigneeID *int64, limit, offset int) ([]domain.Task, error) {
+./internal/service/service.go:	return s.repo.GetTasks(ctx, teamID, status, assigneeID, limit, offset)
+./internal/service/service.go:}
+./internal/service/service.go:
+./internal/service/service.go:func (s *Service) UpdateTask(ctx context.Context, taskID int64, teamID int64, newStatus string, userID int64) error {
+./internal/service/service.go:	role, err := s.repo.GetTeamMemberRole(ctx, teamID, userID)
+./internal/service/service.go:	if err != nil || role == "" {
+./internal/service/service.go:		return errors.New("user is not a member of the team")
+./internal/service/service.go:	}
+./internal/service/service.go:	return s.repo.UpdateTask(ctx, taskID, newStatus, userID)
+./internal/service/service.go:}
+./internal/service/service.go:
+./internal/service/service.go:func (s *Service) GetTaskHistory(ctx context.Context, taskID int64) ([]domain.TaskHistory, error) {
+./internal/service/service.go:	return s.repo.GetTaskHistory(ctx, taskID)
+./internal/service/service.go:}
+./internal/service/service.go:
+./internal/service/service.go:func (s *Service) AddComment(ctx context.Context, taskID, userID int64, content string) (*domain.Comment, error) {
+./internal/service/service.go:	// 1. Проверяем, существует ли задача
+./internal/service/service.go:	task, err := s.repo.GetTaskByID(ctx, taskID)
+./internal/service/service.go:	if err != nil {
+./internal/service/service.go:		return nil, err
+./internal/service/service.go:	}
+./internal/service/service.go:	if task == nil {
+./internal/service/service.go:		return nil, errors.New("task not found")
+./internal/service/service.go:	}
+./internal/service/service.go:
+./internal/service/service.go:	// 2. Проверяем, состоит ли пользователь в команде этой задачи
+./internal/service/service.go:	role, err := s.repo.GetTeamMemberRole(ctx, task.TeamID, userID)
+./internal/service/service.go:	if err != nil || role == "" {
+./internal/service/service.go:		return nil, errors.New("user is not a member of the team")
+./internal/service/service.go:	}
+./internal/service/service.go:
+./internal/service/service.go:	// 3. Создаем комментарий
+./internal/service/service.go:	comment := &domain.Comment{
+./internal/service/service.go:		TaskID:  taskID,
+./internal/service/service.go:		UserID:  userID,
+./internal/service/service.go:		Content: content,
+./internal/service/service.go:	}
+./internal/service/service.go:	err = s.repo.CreateComment(ctx, comment)
+./internal/service/service.go:	return comment, err
+./internal/service/service.go:}
+./internal/service/service.go:
+./internal/service/service.go:func (s *Service) GetTaskComments(ctx context.Context, taskID, userID int64) ([]domain.Comment, error) {
+./internal/service/service.go:	task, err := s.repo.GetTaskByID(ctx, taskID)
+./internal/service/service.go:	if err != nil {
+./internal/service/service.go:		return nil, err
+./internal/service/service.go:	}
+./internal/service/service.go:	if task == nil {
+./internal/service/service.go:		return nil, errors.New("task not found")
+./internal/service/service.go:	}
+./internal/service/service.go:
+./internal/service/service.go:	role, err := s.repo.GetTeamMemberRole(ctx, task.TeamID, userID)
+./internal/service/service.go:	if err != nil || role == "" {
+./internal/service/service.go:		return nil, errors.New("user is not a member of the team")
+./internal/service/service.go:	}
+./internal/service/service.go:
+./internal/service/service.go:	return s.repo.GetTaskComments(ctx, taskID)
+./internal/service/service.go:}
+./internal/service/service.go:
+./internal/service/service.go:func (s *Service) GetAnalytics(ctx context.Context) (map[string]interface{}, error) {
+./internal/service/service.go:	teamStats, err := s.repo.GetTeamStats(ctx)
+./internal/service/service.go:	if err != nil {
+./internal/service/service.go:		return nil, err
+./internal/service/service.go:	}
+./internal/service/service.go:	topUsers, err := s.repo.GetTopUsersPerTeam(ctx)
+./internal/service/service.go:	if err != nil {
+./internal/service/service.go:		return nil, err
+./internal/service/service.go:	}
+./internal/service/service.go:	invalidTasks, err := s.repo.GetTasksWithExternalAssignee(ctx)
+./internal/service/service.go:	if err != nil {
+./internal/service/service.go:		return nil, err
+./internal/service/service.go:	}
+./internal/service/service.go:
+./internal/service/service.go:	return map[string]interface{}{
+./internal/service/service.go:		"team_stats":    teamStats,
+./internal/service/service.go:		"top_users":     topUsers,
+./internal/service/service.go:		"invalid_tasks": invalidTasks,
+./internal/service/service.go:	}, nil
+./internal/service/service.go:}
+./internal/service/service_test.go:package service
+./internal/service/service_test.go:
+./internal/service/service_test.go:import (
+./internal/service/service_test.go:	"context"
+./internal/service/service_test.go:	"errors"
+./internal/service/service_test.go:	"testing"
+./internal/service/service_test.go:
+./internal/service/service_test.go:	"github.com/stretchr/testify/assert"
+./internal/service/service_test.go:	"github.com/stretchr/testify/mock"
+./internal/service/service_test.go:	"github.com/xela07ax/luna-tasks-sbs/internal/domain"
+./internal/service/service_test.go:	"golang.org/x/crypto/bcrypt"
+./internal/service/service_test.go:)
+./internal/service/service_test.go:
+./internal/service/service_test.go:// MockRepository - мок для слоя БД
+./internal/service/service_test.go:type MockRepository struct {
+./internal/service/service_test.go:	mock.Mock
+./internal/service/service_test.go:}
+./internal/service/service_test.go:
+./internal/service/service_test.go:func (m *MockRepository) CreateUser(ctx context.Context, user *domain.User) error {
+./internal/service/service_test.go:	args := m.Called(ctx, user)
+./internal/service/service_test.go:	if args.Get(0) != nil {
+./internal/service/service_test.go:		return args.Error(0)
+./internal/service/service_test.go:	}
+./internal/service/service_test.go:	user.ID = 1 // Имитируем присвоение ID базой данных
+./internal/service/service_test.go:	return nil
+./internal/service/service_test.go:}
+./internal/service/service_test.go:
+./internal/service/service_test.go:func (m *MockRepository) GetUserByUsername(ctx context.Context, username string) (*domain.User, error) {
+./internal/service/service_test.go:	args := m.Called(ctx, username)
+./internal/service/service_test.go:	if args.Get(0) == nil {
+./internal/service/service_test.go:		return nil, args.Error(1)
+./internal/service/service_test.go:	}
+./internal/service/service_test.go:	return args.Get(0).(*domain.User), args.Error(1)
+./internal/service/service_test.go:}
+./internal/service/service_test.go:
+./internal/service/service_test.go:func (m *MockRepository) GetUserByID(ctx context.Context, id int64) (*domain.User, error) {
+./internal/service/service_test.go:	args := m.Called(ctx, id)
+./internal/service/service_test.go:	if args.Get(0) == nil {
+./internal/service/service_test.go:		return nil, args.Error(1)
+./internal/service/service_test.go:	}
+./internal/service/service_test.go:	return args.Get(0).(*domain.User), args.Error(1)
+./internal/service/service_test.go:}
+./internal/service/service_test.go:
+./internal/service/service_test.go:func (m *MockRepository) StoreRefreshToken(ctx context.Context, token string, userID int64, ttl time.Duration) error {
+./internal/service/service_test.go:	args := m.Called(ctx, token, userID, ttl)
+./internal/service/service_test.go:	return args.Error(0)
+./internal/service/service_test.go:}
+./internal/service/service_test.go:
+./internal/service/service_test.go:func (m *MockRepository) GetUserIDByRefreshToken(ctx context.Context, token string) (int64, error) {
+./internal/service/service_test.go:	args := m.Called(ctx, token)
+./internal/service/service_test.go:	return args.Get(0).(int64), args.Error(1)
+./internal/service/service_test.go:}
+./internal/service/service_test.go:
+./internal/service/service_test.go:func (m *MockRepository) DeleteRefreshToken(ctx context.Context, token string) error {
+./internal/service/service_test.go:	args := m.Called(ctx, token)
+./internal/service/service_test.go:	return args.Error(0)
+./internal/service/service_test.go:}
+./internal/service/service_test.go:
+./internal/service/service_test.go:func (m *MockRepository) CreateTeam(ctx context.Context, team *domain.Team) error {
+./internal/service/service_test.go:	args := m.Called(ctx, team)
+./internal/service/service_test.go:	return args.Error(0)
+./internal/service/service_test.go:}
+./internal/service/service_test.go:
+./internal/service/service_test.go:func (m *MockRepository) GetUserTeams(ctx context.Context, userID int64) ([]domain.Team, error) {
+./internal/service/service_test.go:	args := m.Called(ctx, userID)
+./internal/service/service_test.go:	return args.Get(0).([]domain.Team), args.Error(1)
+./internal/service/service_test.go:}
+./internal/service/service_test.go:
+./internal/service/service_test.go:func (m *MockRepository) InviteToTeam(ctx context.Context, teamID, userID int64, role string) error {
+./internal/service/service_test.go:	args := m.Called(ctx, teamID, userID, role)
+./internal/service/service_test.go:	return args.Error(0)
+./internal/service/service_test.go:}
+./internal/service/service_test.go:
+./internal/service/service_test.go:func (m *MockRepository) GetTeamMemberRole(ctx context.Context, teamID, userID int64) (string, error) {
+./internal/service/service_test.go:	args := m.Called(ctx, teamID, userID)
+./internal/service/service_test.go:	return args.String(0), args.Error(1)
+./internal/service/service_test.go:}
+./internal/service/service_test.go:
+./internal/service/service_test.go:func (m *MockRepository) CreateTask(ctx context.Context, task *domain.Task) error {
+./internal/service/service_test.go:	args := m.Called(ctx, task)
+./internal/service/service_test.go:	return args.Error(0)
+./internal/service/service_test.go:}
+./internal/service/service_test.go:
+./internal/service/service_test.go:func (m *MockRepository) GetTasks(ctx context.Context, teamID int64, status string, assigneeID *int64, limit, offset int) ([]domain.Task, error) {
+./internal/service/service_test.go:	args := m.Called(ctx, teamID, status, assigneeID, limit, offset)
+./internal/service/service_test.go:	return args.Get(0).([]domain.Task), args.Error(1)
+./internal/service/service_test.go:}
+./internal/service/service_test.go:
+./internal/service/service_test.go:func (m *MockRepository) UpdateTask(ctx context.Context, taskID int64, newStatus string, changedBy int64) error {
+./internal/service/service_test.go:	args := m.Called(ctx, taskID, newStatus, changedBy)
+./internal/service/service_test.go:	return args.Error(0)
+./internal/service/service_test.go:}
+./internal/service/service_test.go:
+./internal/service/service_test.go:func (m *MockRepository) GetTaskHistory(ctx context.Context, taskID int64) ([]domain.TaskHistory, error) {
+./internal/service/service_test.go:	args := m.Called(ctx, taskID)
+./internal/service/service_test.go:	return args.Get(0).([]domain.TaskHistory), args.Error(1)
+./internal/service/service_test.go:}
+./internal/service/service_test.go:
+./internal/service/service_test.go:func (m *MockRepository) GetTaskByID(ctx context.Context, taskID int64) (*domain.Task, error) {
+./internal/service/service_test.go:	args := m.Called(ctx, taskID)
+./internal/service/service_test.go:	if args.Get(0) == nil {
+./internal/service/service_test.go:		return nil, args.Error(1)
+./internal/service/service_test.go:	}
+./internal/service/service_test.go:	return args.Get(0).(*domain.Task), args.Error(1)
+./internal/service/service_test.go:}
+./internal/service/service_test.go:
+./internal/service/service_test.go:func (m *MockRepository) CreateComment(ctx context.Context, comment *domain.Comment) error {
+./internal/service/service_test.go:	args := m.Called(ctx, comment)
+./internal/service/service_test.go:	if args.Get(0) != nil {
+./internal/service/service_test.go:		return args.Error(0)
+./internal/service/service_test.go:	}
+./internal/service/service_test.go:	comment.ID = 1
+./internal/service/service_test.go:	return nil
+./internal/service/service_test.go:}
+./internal/service/service_test.go:
+./internal/service/service_test.go:func (m *MockRepository) GetTaskComments(ctx context.Context, taskID int64) ([]domain.Comment, error) {
+./internal/service/service_test.go:	args := m.Called(ctx, taskID)
+./internal/service/service_test.go:	return args.Get(0).([]domain.Comment), args.Error(1)
+./internal/service/service_test.go:}
+./internal/service/service_test.go:
+./internal/service/service_test.go:func (m *MockRepository) GetTeamStats(ctx context.Context) ([]map[string]interface{}, error) {
+./internal/service/service_test.go:	args := m.Called(ctx)
+./internal/service/service_test.go:	return args.Get(0).([]map[string]interface{}), args.Error(1)
+./internal/service/service_test.go:}
+./internal/service/service_test.go:
+./internal/service/service_test.go:func (m *MockRepository) GetTopUsersPerTeam(ctx context.Context) ([]map[string]interface{}, error) {
+./internal/service/service_test.go:	args := m.Called(ctx)
+./internal/service/service_test.go:	return args.Get(0).([]map[string]interface{}), args.Error(1)
+./internal/service/service_test.go:}
+./internal/service/service_test.go:
+./internal/service/service_test.go:func (m *MockRepository) GetTasksWithExternalAssignee(ctx context.Context) ([]domain.Task, error) {
+./internal/service/service_test.go:	args := m.Called(ctx)
+./internal/service/service_test.go:	return args.Get(0).([]domain.Task), args.Error(1)
+./internal/service/service_test.go:}
+./internal/service/service_test.go:
+./internal/service/service_test.go:// MockTokenGenerator - мок для JWT
+./internal/service/service_test.go:type MockTokenGenerator struct {
+./internal/service/service_test.go:	mock.Mock
+./internal/service/service_test.go:}
+./internal/service/service_test.go:
+./internal/service/service_test.go:func (m *MockTokenGenerator) GenerateToken(userID int64, username string) (string, error) {
+./internal/service/service_test.go:	args := m.Called(userID, username)
+./internal/service/service_test.go:	return args.String(0), args.Error(1)
+./internal/service/service_test.go:}
+./internal/service/service_test.go:
+./internal/service/service_test.go:// =========================================================================
+./internal/service/service_test.go:// UNIT TESTS (BUSINESS LOGIC)
+./internal/service/service_test.go:// =========================================================================
+./internal/service/service_test.go:
+./internal/service/service_test.go:func TestService_Register(t *testing.T) {
+./internal/service/service_test.go:	mockRepo := new(MockRepository)
+./internal/service/service_test.go:	svc := NewService(mockRepo, nil, time.Minute*15, time.Hour*24)
+./internal/service/service_test.go:
+./internal/service/service_test.go:	mockRepo.On("CreateUser", mock.Anything, mock.AnythingOfType("*domain.User")).Return(nil)
+./internal/service/service_test.go:
+./internal/service/service_test.go:	err := svc.Register(context.Background(), "test@test.com", "testuser", "password123")
+./internal/service/service_test.go:
+./internal/service/service_test.go:	assert.NoError(t, err)
+./internal/service/service_test.go:	mockRepo.AssertExpectations(t)
+./internal/service/service_test.go:}
+./internal/service/service_test.go:
+./internal/service/service_test.go:func TestService_Login_Success(t *testing.T) {
+./internal/service/service_test.go:	mockRepo := new(MockRepository)
+./internal/service/service_test.go:	mockJWT := new(MockTokenGenerator)
+./internal/service/service_test.go:	svc := NewService(mockRepo, mockJWT, time.Minute*15, time.Hour*24)
+./internal/service/service_test.go:
+./internal/service/service_test.go:	hash, _ := bcrypt.GenerateFromPassword([]byte("password123"), bcrypt.DefaultCost)
+./internal/service/service_test.go:	user := &domain.User{ID: 1, Username: "testuser", PasswordHash: string(hash)}
+./internal/service/service_test.go:
+./internal/service/service_test.go:	mockRepo.On("GetUserByUsername", mock.Anything, "testuser").Return(user, nil)
+./internal/service/service_test.go:	mockJWT.On("GenerateToken", int64(1), "testuser").Return("mock.jwt.token", nil)
+./internal/service/service_test.go:	mockRepo.On("StoreRefreshToken", mock.Anything, mock.AnythingOfType("string"), int64(1), time.Hour*24).Return(nil)
+./internal/service/service_test.go:
+./internal/service/service_test.go:	tokens, err := svc.Login(context.Background(), "testuser", "password123")
+./internal/service/service_test.go:
+./internal/service/service_test.go:	assert.NoError(t, err)
+./internal/service/service_test.go:	assert.NotNil(t, tokens)
+./internal/service/service_test.go:	assert.Equal(t, "mock.jwt.token", tokens.AccessToken)
+./internal/service/service_test.go:	assert.NotEmpty(t, tokens.RefreshToken)
+./internal/service/service_test.go:	mockRepo.AssertExpectations(t)
+./internal/service/service_test.go:	mockJWT.AssertExpectations(t)
+./internal/service/service_test.go:}
+./internal/service/service_test.go:
+./internal/service/service_test.go:func TestService_Login_InvalidPassword(t *testing.T) {
+./internal/service/service_test.go:	mockRepo := new(MockRepository)
+./internal/service/service_test.go:	svc := NewService(mockRepo, nil, time.Minute*15, time.Hour*24)
+./internal/service/service_test.go:
+./internal/service/service_test.go:	hash, _ := bcrypt.GenerateFromPassword([]byte("password123"), bcrypt.DefaultCost)
+./internal/service/service_test.go:	user := &domain.User{ID: 1, Username: "testuser", PasswordHash: string(hash)}
+./internal/service/service_test.go:
+./internal/service/service_test.go:	mockRepo.On("GetUserByUsername", mock.Anything, "testuser").Return(user, nil)
+./internal/service/service_test.go:
+./internal/service/service_test.go:	tokens, err := svc.Login(context.Background(), "testuser", "wrongpassword")
+./internal/service/service_test.go:
+./internal/service/service_test.go:	assert.Error(t, err)
+./internal/service/service_test.go:	assert.Equal(t, "invalid credentials", err.Error())
+./internal/service/service_test.go:	assert.Nil(t, tokens)
+./internal/service/service_test.go:}
+./internal/service/service_test.go:
+./internal/service/service_test.go:// -------------------------------------------------------------------------
+./internal/service/service_test.go:// БИЗНЕС-ПРАВИЛА: Управление командами (Ролевая модель)
+./internal/service/service_test.go:// -------------------------------------------------------------------------
+./internal/service/service_test.go:
+./internal/service/service_test.go:func TestService_InviteToTeam_RoleMatrix(t *testing.T) {
+./internal/service/service_test.go:	tests := []struct {
+./internal/service/service_test.go:		name        string
+./internal/service/service_test.go:		inviterRole string
+./internal/service/service_test.go:		roleErr     error
+./internal/service/service_test.go:		expectedErr string
+./internal/service/service_test.go:	}{
+./internal/service/service_test.go:		{"Owner can invite", "owner", nil, ""},
+./internal/service/service_test.go:		{"Admin can invite", "admin", nil, ""},
+./internal/service/service_test.go:		{"Member cannot invite", "member", nil, "insufficient permissions"},
+./internal/service/service_test.go:		{"Non-member cannot invite", "", nil, "insufficient permissions"},
+./internal/service/service_test.go:		{"DB Error on role check", "", errors.New("db error"), "db error"},
+./internal/service/service_test.go:	}
+./internal/service/service_test.go:
+./internal/service/service_test.go:	for _, tt := range tests {
+./internal/service/service_test.go:		t.Run(tt.name, func(t *testing.T) {
+./internal/service/service_test.go:			mockRepo := new(MockRepository)
+./internal/service/service_test.go:			svc := NewService(mockRepo, nil, time.Minute*15, time.Hour*24)
+./internal/service/service_test.go:
+./internal/service/service_test.go:			teamID, inviterID, inviteeID := int64(1), int64(100), int64(200)
+./internal/service/service_test.go:
+./internal/service/service_test.go:			// Мокаем проверку роли
+./internal/service/service_test.go:			mockRepo.On("GetTeamMemberRole", mock.Anything, teamID, inviterID).Return(tt.inviterRole, tt.roleErr)
+./internal/service/service_test.go:
+./internal/service/service_test.go:			// Если ожидается успех, мокаем само приглашение
+./internal/service/service_test.go:			if tt.expectedErr == "" {
+./internal/service/service_test.go:				mockRepo.On("InviteToTeam", mock.Anything, teamID, inviteeID, "member").Return(nil)
+./internal/service/service_test.go:			}
+./internal/service/service_test.go:
+./internal/service/service_test.go:			err := svc.InviteToTeam(context.Background(), teamID, inviterID, inviteeID)
+./internal/service/service_test.go:
+./internal/service/service_test.go:			if tt.expectedErr == "" {
+./internal/service/service_test.go:				assert.NoError(t, err)
+./internal/service/service_test.go:			} else {
+./internal/service/service_test.go:				assert.Error(t, err)
+./internal/service/service_test.go:				assert.Contains(t, err.Error(), tt.expectedErr)
+./internal/service/service_test.go:			}
+./internal/service/service_test.go:			mockRepo.AssertExpectations(t)
+./internal/service/service_test.go:		})
+./internal/service/service_test.go:	}
+./internal/service/service_test.go:}
+./internal/service/service_test.go:
+./internal/service/service_test.go:// -------------------------------------------------------------------------
+./internal/service/service_test.go:// БИЗНЕС-ПРАВИЛА: Управление задачами
+./internal/service/service_test.go:// -------------------------------------------------------------------------
+./internal/service/service_test.go:
+./internal/service/service_test.go:func TestService_CreateTask_Permissions(t *testing.T) {
+./internal/service/service_test.go:	mockRepo := new(MockRepository)
+./internal/service/service_test.go:	svc := NewService(mockRepo, nil, time.Minute*15, time.Hour*24)
+./internal/service/service_test.go:
+./internal/service/service_test.go:	task := &domain.Task{TeamID: 1, Title: "New Task"}
+./internal/service/service_test.go:
+./internal/service/service_test.go:	// Успешный кейс: пользователь состоит в команде
+./internal/service/service_test.go:	mockRepo.On("GetTeamMemberRole", mock.Anything, int64(1), int64(100)).Return("member", nil).Once()
+./internal/service/service_test.go:	mockRepo.On("CreateTask", mock.Anything, task).Return(nil).Once()
+./internal/service/service_test.go:
+./internal/service/service_test.go:	err := svc.CreateTask(context.Background(), task, 100)
+./internal/service/service_test.go:	assert.NoError(t, err)
+./internal/service/service_test.go:	assert.Equal(t, int64(100), task.CreatedBy)
+./internal/service/service_test.go:
+./internal/service/service_test.go:	// Негативный кейс: пользователь НЕ состоит в команде
+./internal/service/service_test.go:	mockRepo.On("GetTeamMemberRole", mock.Anything, int64(1), int64(200)).Return("", nil).Once()
+./internal/service/service_test.go:
+./internal/service/service_test.go:	err = svc.CreateTask(context.Background(), task, 200)
+./internal/service/service_test.go:	assert.Error(t, err)
+./internal/service/service_test.go:	assert.Equal(t, "user is not a member of the team", err.Error())
+./internal/service/service_test.go:
+./internal/service/service_test.go:	mockRepo.AssertExpectations(t)
+./internal/service/service_test.go:}
+./internal/service/service_test.go:
+./internal/service/service_test.go:func TestService_UpdateTask_Permissions(t *testing.T) {
+./internal/service/service_test.go:	mockRepo := new(MockRepository)
+./internal/service/service_test.go:	svc := NewService(mockRepo, nil, time.Minute*15, time.Hour*24)
+./internal/service/service_test.go:
+./internal/service/service_test.go:	teamID, taskID, userID := int64(1), int64(10), int64(100)
+./internal/service/service_test.go:
+./internal/service/service_test.go:	// Успешный кейс: пользователь в команде
+./internal/service/service_test.go:	mockRepo.On("GetTeamMemberRole", mock.Anything, teamID, userID).Return("admin", nil).Once()
+./internal/service/service_test.go:	mockRepo.On("UpdateTask", mock.Anything, taskID, "in_progress", userID).Return(nil).Once()
+./internal/service/service_test.go:
+./internal/service/service_test.go:	err := svc.UpdateTask(context.Background(), taskID, teamID, "in_progress", userID)
+./internal/service/service_test.go:	assert.NoError(t, err)
+./internal/service/service_test.go:
+./internal/service/service_test.go:	// Негативный кейс: пользователь не в команде
+./internal/service/service_test.go:	mockRepo.On("GetTeamMemberRole", mock.Anything, teamID, int64(999)).Return("", nil).Once()
+./internal/service/service_test.go:
+./internal/service/service_test.go:	err = svc.UpdateTask(context.Background(), taskID, teamID, "done", int64(999))
+./internal/service/service_test.go:	assert.Error(t, err)
+./internal/service/service_test.go:	assert.Equal(t, "user is not a member of the team", err.Error())
+./internal/service/service_test.go:
+./internal/service/service_test.go:	mockRepo.AssertExpectations(t)
+./internal/service/service_test.go:}
+./internal/service/service_test.go:
+./internal/service/service_test.go:// -------------------------------------------------------------------------
+./internal/service/service_test.go:// БИЗНЕС-ПРАВИЛА: Комментарии к задачам
+./internal/service/service_test.go:// -------------------------------------------------------------------------
+./internal/service/service_test.go:
+./internal/service/service_test.go:func TestService_AddComment_BusinessRules(t *testing.T) {
+./internal/service/service_test.go:	tests := []struct {
+./internal/service/service_test.go:		name        string
+./internal/service/service_test.go:		taskExists  bool
+./internal/service/service_test.go:		userRole    string
+./internal/service/service_test.go:		expectedErr string
+./internal/service/service_test.go:	}{
+./internal/service/service_test.go:		{"Success: Member can comment", true, "member", ""},
+./internal/service/service_test.go:		{"Success: Owner can comment", true, "owner", ""},
+./internal/service/service_test.go:		{"Fail: Non-member cannot comment", true, "", "user is not a member of the team"},
+./internal/service/service_test.go:		{"Fail: Task does not exist", false, "", "task not found"},
+./internal/service/service_test.go:	}
+./internal/service/service_test.go:
+./internal/service/service_test.go:	for _, tt := range tests {
+./internal/service/service_test.go:		t.Run(tt.name, func(t *testing.T) {
+./internal/service/service_test.go:			mockRepo := new(MockRepository)
+./internal/service/service_test.go:			svc := NewService(mockRepo, nil, time.Minute*15, time.Hour*24)
+./internal/service/service_test.go:
+./internal/service/service_test.go:			taskID, teamID, userID := int64(10), int64(1), int64(100)
+./internal/service/service_test.go:			content := "Looks good to me!"
+./internal/service/service_test.go:
+./internal/service/service_test.go:			// 1. Мокаем получение задачи
+./internal/service/service_test.go:			if tt.taskExists {
+./internal/service/service_test.go:				mockRepo.On("GetTaskByID", mock.Anything, taskID).Return(&domain.Task{ID: taskID, TeamID: teamID}, nil)
+./internal/service/service_test.go:				
+./internal/service/service_test.go:				// 2. Мокаем проверку роли (только если задача существует)
+./internal/service/service_test.go:				mockRepo.On("GetTeamMemberRole", mock.Anything, teamID, userID).Return(tt.userRole, nil)
+./internal/service/service_test.go:				
+./internal/service/service_test.go:				// 3. Мокаем создание коммента (только если роль позволяет)
+./internal/service/service_test.go:				if tt.expectedErr == "" {
+./internal/service/service_test.go:					mockRepo.On("CreateComment", mock.Anything, mock.AnythingOfType("*domain.Comment")).Return(nil)
+./internal/service/service_test.go:				}
+./internal/service/service_test.go:			} else {
+./internal/service/service_test.go:				mockRepo.On("GetTaskByID", mock.Anything, taskID).Return(nil, nil)
+./internal/service/service_test.go:			}
+./internal/service/service_test.go:
+./internal/service/service_test.go:			comment, err := svc.AddComment(context.Background(), taskID, userID, content)
+./internal/service/service_test.go:
+./internal/service/service_test.go:			if tt.expectedErr == "" {
+./internal/service/service_test.go:				assert.NoError(t, err)
+./internal/service/service_test.go:				assert.NotNil(t, comment)
+./internal/service/service_test.go:				assert.Equal(t, content, comment.Content)
+./internal/service/service_test.go:				assert.Equal(t, taskID, comment.TaskID)
+./internal/service/service_test.go:				assert.Equal(t, userID, comment.UserID)
+./internal/service/service_test.go:			} else {
+./internal/service/service_test.go:				assert.Error(t, err)
+./internal/service/service_test.go:				assert.Contains(t, err.Error(), tt.expectedErr)
+./internal/service/service_test.go:				assert.Nil(t, comment)
+./internal/service/service_test.go:			}
+./internal/service/service_test.go:			mockRepo.AssertExpectations(t)
+./internal/service/service_test.go:		})
+./internal/service/service_test.go:	}
+./internal/service/service_test.go:}
+./main.go:package main
+./main.go:
+./main.go:import (
+./main.go:	"context"
+./main.go:	"fmt"
+./main.go:	"net/http"
+./main.go:	"os"
+./main.go:	"os/signal"
+./main.go:	"syscall"
+./main.go:	"time"
+./main.go:
+./main.go:	_ "github.com/go-sql-driver/mysql"
+./main.go:	"github.com/jmoiron/sqlx"
+./main.go:	"github.com/prometheus/client_golang/prometheus/promhttp"
+./main.go:	"github.com/redis/go-redis/v9"
+./main.go:	"github.com/xela07ax/luna-tasks-sbs/internal/config"
+./main.go:	"github.com/xela07ax/luna-tasks-sbs/internal/handler"
+./main.go:	"github.com/xela07ax/luna-tasks-sbs/internal/infra"
+./main.go:	"github.com/xela07ax/luna-tasks-sbs/internal/repository"
+./main.go:	"github.com/xela07ax/luna-tasks-sbs/internal/service"
+./main.go:	"github.com/xela07ax/luna-tasks-sbs/pkg/logger"
+./main.go:	"go.uber.org/zap"
+./main.go:)
+./main.go:
+./main.go:func main() {
+./main.go:	env := os.Getenv("APP_ENV")
+./main.go:	if env == "" {
+./main.go:		env = "development" // Значение по умолчанию для локального запуска
+./main.go:	}
+./main.go:
+./main.go:	log, err := logger.InitLogger(env)
+./main.go:	if err != nil {
+./main.go:		panic("не удалось инициализировать логгер: " + err.Error())
+./main.go:	}
+./main.go:	// Заменяем глобальный логгер, если где-то используется zap.L()
+./main.go:	zap.ReplaceGlobals(log)
+./main.go:	defer log.Sync()
+./main.go:
+./main.go:	log.Info("Сервис запущен", zap.String("env", env))
+./main.go:	log.Debug("Это дебаг сообщение, оно видно только локально")
+./main.go:
+./main.go:	// 1. Загрузка конфигурации
+./main.go:	cfg, err := config.LoadConfig("configs")
+./main.go:	if err != nil {
+./main.go:		log.Fatal("Failed to load config", zap.Error(err))
+./main.go:	}
+./main.go:
+./main.go:	// 2. Подключение к MySQL
+./main.go:	dsn := fmt.Sprintf("%s:%s@tcp(%s:%d)/%s?parseTime=true",
+./main.go:		cfg.Database.User,
+./main.go:		cfg.Database.Password,
+./main.go:		cfg.Database.Host,
+./main.go:		cfg.Database.Port,
+./main.go:		cfg.Database.DBName,
+./main.go:	)
+./main.go:	db, err := sqlx.Connect("mysql", dsn)
+./main.go:	if err != nil {
+./main.go:		log.Fatal("Failed to connect to MySQL", zap.Error(err))
+./main.go:	}
+./main.go:	db.SetMaxOpenConns(cfg.Database.MaxOpenConns)
+./main.go:	db.SetMaxIdleConns(cfg.Database.MaxIdleConns)
+./main.go:	db.SetConnMaxLifetime(cfg.Database.ConnMaxLifetime)
+./main.go:
+./main.go:	// 3. Подключение к Redis
+./main.go:	rdb := redis.NewClient(&redis.Options{
+./main.go:		Addr:     fmt.Sprintf("%s:%d", cfg.Redis.Host, cfg.Redis.Port),
+./main.go:		Password: cfg.Redis.Password,
+./main.go:		DB:       cfg.Redis.DB,
+./main.go:	})
+./main.go:
+./main.go:	// 4. Инициализация слоев
+./main.go:	repo := repository.NewRepository(db, rdb)
+./main.go:
+./main.go:	// Проверяем наличие ключей для JWT (RS256)
+./main.go:	if len(cfg.Auth.PrivateKey) == 0 || len(cfg.Auth.PublicKey) == 0 {
+./main.go:		log.Fatal("RSA keys for JWT are missing. Please provide certs/private.pem and certs/public.pem or set ENV vars.")
+./main.go:	}
+./main.go:
+./main.go:	jwtManager, err := infra.NewJWTManager(cfg.Auth.PrivateKey, cfg.Auth.PublicKey, cfg.Auth.AccessTokenTTL)
+./main.go:	if err != nil {
+./main.go:		log.Fatal("Failed to init JWT Manager", zap.Error(err))
+./main.go:	}
+./main.go:
+./main.go:	svc := service.NewService(repo, jwtManager, cfg.Auth.AccessTokenTTL, cfg.Auth.RefreshTokenTTL)
+./main.go:	h := handler.NewHandler(svc, log, cfg)
+./main.go:
+./main.go:	router := h.InitRoutes()
+./main.go:
+./main.go:	// 5. Запуск сервера метрик (отдельный порт для безопасности)
+./main.go:	if cfg.Metrics.Enabled {
+./main.go:		go func() {
+./main.go:			metricsMux := http.NewServeMux()
+./main.go:			metricsMux.Handle("/metrics", promhttp.Handler())
+./main.go:			metricsAddr := fmt.Sprintf(":%d", cfg.Metrics.Port)
+./main.go:			log.Info("Starting metrics server", zap.String("addr", metricsAddr))
+./main.go:			if err := http.ListenAndServe(metricsAddr, metricsMux); err != nil {
+./main.go:				log.Error("Metrics server failed", zap.Error(err))
+./main.go:			}
+./main.go:		}()
+./main.go:	}
+./main.go:
+./main.go:	// 6. Запуск основного API сервера
+./main.go:	srv := &http.Server{
+./main.go:		Addr:         fmt.Sprintf(":%d", cfg.Server.Port),
+./main.go:		Handler:      router,
+./main.go:		ReadTimeout:  cfg.Server.ReadTimeout,
+./main.go:		WriteTimeout: cfg.Server.WriteTimeout,
+./main.go:	}
+./main.go:
+./main.go:	go func() {
+./main.go:		log.Info("Starting API server", zap.Int("port", cfg.Server.Port))
+./main.go:		if err := srv.ListenAndServe(); err != nil && err != http.ErrServerClosed {
+./main.go:			log.Fatal("Server failed", zap.Error(err))
+./main.go:		}
+./main.go:	}()
+./main.go:
+./main.go:	// 7. Graceful shutdown
+./main.go:	quit := make(chan os.Signal, 1)
+./main.go:	signal.Notify(quit, syscall.SIGINT, syscall.SIGTERM)
+./main.go:	<-quit
+./main.go:	log.Info("Shutting down server...")
+./main.go:
+./main.go:	ctx, cancel := context.WithTimeout(context.Background(), 5*time.Second)
+./main.go:	defer cancel()
+./main.go:
+./main.go:	if err := srv.Shutdown(ctx); err != nil {
+./main.go:		log.Fatal("Server forced to shutdown", zap.Error(err))
+./main.go:	}
+./main.go:
+./main.go:	log.Info("Server exiting")
+./main.go:}
+./migrations/000001_init.down.sql:DROP TABLE task_comments;
+./migrations/000001_init.down.sql:DROP TABLE task_history;
+./migrations/000001_init.down.sql:DROP TABLE tasks;
+./migrations/000001_init.down.sql:DROP TABLE team_members;
+./migrations/000001_init.down.sql:DROP TABLE teams;
+./migrations/000001_init.down.sql:DROP TABLE users;
+./migrations/000001_init.up.sql:CREATE TABLE users
+./migrations/000001_init.up.sql:(
+./migrations/000001_init.up.sql:    id            BIGINT AUTO_INCREMENT PRIMARY KEY,
+./migrations/000001_init.up.sql:    email         VARCHAR(255) UNIQUE NOT NULL,
+./migrations/000001_init.up.sql:    username      VARCHAR(50) UNIQUE  NOT NULL,
+./migrations/000001_init.up.sql:    password_hash VARCHAR(255)        NOT NULL,
+./migrations/000001_init.up.sql:    created_at    TIMESTAMP DEFAULT CURRENT_TIMESTAMP,
+./migrations/000001_init.up.sql:    updated_at    TIMESTAMP DEFAULT CURRENT_TIMESTAMP ON UPDATE CURRENT_TIMESTAMP
+./migrations/000001_init.up.sql:);
+./migrations/000001_init.up.sql:
+./migrations/000001_init.up.sql:CREATE TABLE teams
+./migrations/000001_init.up.sql:(
+./migrations/000001_init.up.sql:    id         BIGINT AUTO_INCREMENT PRIMARY KEY,
+./migrations/000001_init.up.sql:    name       VARCHAR(255) NOT NULL,
+./migrations/000001_init.up.sql:    created_by BIGINT       NOT NULL,
+./migrations/000001_init.up.sql:    created_at TIMESTAMP DEFAULT CURRENT_TIMESTAMP,
+./migrations/000001_init.up.sql:    updated_at TIMESTAMP DEFAULT CURRENT_TIMESTAMP ON UPDATE CURRENT_TIMESTAMP,
+./migrations/000001_init.up.sql:    FOREIGN KEY (created_by) REFERENCES users (id)
+./migrations/000001_init.up.sql:);
+./migrations/000001_init.up.sql:
+./migrations/000001_init.up.sql:CREATE TABLE team_members
+./migrations/000001_init.up.sql:(
+./migrations/000001_init.up.sql:    team_id   BIGINT      NOT NULL,
+./migrations/000001_init.up.sql:    user_id   BIGINT      NOT NULL,
+./migrations/000001_init.up.sql:    role      VARCHAR(20) NOT NULL DEFAULT 'member', -- owner, admin, member
+./migrations/000001_init.up.sql:    joined_at TIMESTAMP            DEFAULT CURRENT_TIMESTAMP,
+./migrations/000001_init.up.sql:    PRIMARY KEY (team_id, user_id),
+./migrations/000001_init.up.sql:    FOREIGN KEY (team_id) REFERENCES teams (id),
+./migrations/000001_init.up.sql:    FOREIGN KEY (user_id) REFERENCES users (id)
+./migrations/000001_init.up.sql:);
+./migrations/000001_init.up.sql:
+./migrations/000001_init.up.sql:CREATE TABLE tasks
+./migrations/000001_init.up.sql:(
+./migrations/000001_init.up.sql:    id          BIGINT AUTO_INCREMENT PRIMARY KEY,
+./migrations/000001_init.up.sql:    team_id     BIGINT       NOT NULL,
+./migrations/000001_init.up.sql:    title       VARCHAR(255) NOT NULL,
+./migrations/000001_init.up.sql:    description TEXT,
+./migrations/000001_init.up.sql:    status      VARCHAR(20)  NOT NULL DEFAULT 'todo', -- todo, in_progress, done
+./migrations/000001_init.up.sql:    assignee_id BIGINT,
+./migrations/000001_init.up.sql:    created_by  BIGINT       NOT NULL,
+./migrations/000001_init.up.sql:    created_at  TIMESTAMP             DEFAULT CURRENT_TIMESTAMP,
+./migrations/000001_init.up.sql:    updated_at  TIMESTAMP             DEFAULT CURRENT_TIMESTAMP ON UPDATE CURRENT_TIMESTAMP,
+./migrations/000001_init.up.sql:    FOREIGN KEY (team_id) REFERENCES teams (id),
+./migrations/000001_init.up.sql:    FOREIGN KEY (assignee_id) REFERENCES users (id),
+./migrations/000001_init.up.sql:    FOREIGN KEY (created_by) REFERENCES users (id)
+./migrations/000001_init.up.sql:);
+./migrations/000001_init.up.sql:
+./migrations/000001_init.up.sql:CREATE TABLE task_history
+./migrations/000001_init.up.sql:(
+./migrations/000001_init.up.sql:    id         BIGINT AUTO_INCREMENT PRIMARY KEY,
+./migrations/000001_init.up.sql:    task_id    BIGINT NOT NULL,
+./migrations/000001_init.up.sql:    changed_by BIGINT NOT NULL,
+./migrations/000001_init.up.sql:    old_status VARCHAR(20),
+./migrations/000001_init.up.sql:    new_status VARCHAR(20),
+./migrations/000001_init.up.sql:    changed_at TIMESTAMP DEFAULT CURRENT_TIMESTAMP,
+./migrations/000001_init.up.sql:    FOREIGN KEY (task_id) REFERENCES tasks (id),
+./migrations/000001_init.up.sql:    FOREIGN KEY (changed_by) REFERENCES users (id)
+./migrations/000001_init.up.sql:);
+./migrations/000001_init.up.sql:
+./migrations/000001_init.up.sql:CREATE TABLE task_comments
+./migrations/000001_init.up.sql:(
+./migrations/000001_init.up.sql:    id         BIGINT AUTO_INCREMENT PRIMARY KEY,
+./migrations/000001_init.up.sql:    task_id    BIGINT NOT NULL,
+./migrations/000001_init.up.sql:    user_id    BIGINT NOT NULL,
+./migrations/000001_init.up.sql:    content    TEXT   NOT NULL,
+./migrations/000001_init.up.sql:    created_at TIMESTAMP DEFAULT CURRENT_TIMESTAMP,
+./migrations/000001_init.up.sql:    FOREIGN KEY (task_id) REFERENCES tasks (id),
+./migrations/000001_init.up.sql:    FOREIGN KEY (user_id) REFERENCES users (id)
+./migrations/000001_init.up.sql:);
+./migrations/000002_add_read_indexes.down.sql:DROP INDEX idx_tasks_created_at ON tasks;
+./migrations/000002_add_read_indexes.down.sql:DROP INDEX idx_tasks_status_updated_at ON tasks;
+./migrations/000002_add_read_indexes.down.sql:DROP INDEX idx_tasks_team_created_at ON tasks;
+./migrations/000002_add_read_indexes.down.sql:DROP INDEX idx_tasks_assignee_id ON tasks;
+./migrations/000002_add_read_indexes.down.sql:DROP INDEX idx_tasks_team_status ON tasks;
+./migrations/000002_add_read_indexes.down.sql:DROP INDEX idx_team_members_user_id ON team_members;
+./migrations/000002_add_read_indexes.down.sql:DROP INDEX idx_task_history_task_id_changed ON task_history;
+./migrations/000002_add_read_indexes.down.sql:DROP INDEX idx_task_comments_task_id_created ON task_comments;
+./migrations/000002_add_read_indexes.up.sql:-- 1. Оптимизация получения списка команд пользователя (метод GetUserTeams)
+./migrations/000002_add_read_indexes.up.sql:-- В таблице team_members составной PK (team_id, user_id). Поиск по user_id без этого индекса приведет к Full Table Scan.
+./migrations/000002_add_read_indexes.up.sql:CREATE INDEX idx_team_members_user_id ON team_members(user_id);
+./migrations/000002_add_read_indexes.up.sql:
+./migrations/000002_add_read_indexes.up.sql:-- 2. Оптимизация метода GetTasks (фильтрация по статусу и команде)
+./migrations/000002_add_read_indexes.up.sql:-- Покрывает запрос: WHERE team_id = ? AND status = ?
+./migrations/000002_add_read_indexes.up.sql:CREATE INDEX idx_tasks_team_status ON tasks(team_id, status);
+./migrations/000002_add_read_indexes.up.sql:
+./migrations/000002_add_read_indexes.up.sql:-- 3. Оптимизация метода GetTasks (фильтрация по исполнителю)
+./migrations/000002_add_read_indexes.up.sql:-- Покрывает запрос: WHERE assignee_id = ?
+./migrations/000002_add_read_indexes.up.sql:CREATE INDEX idx_tasks_assignee_id ON tasks(assignee_id);
+./migrations/000002_add_read_indexes.up.sql:
+./migrations/000002_add_read_indexes.up.sql:-- 4. Оптимизация пагинации списка задач (метод GetTasks)
+./migrations/000002_add_read_indexes.up.sql:-- Покрывает запрос: WHERE team_id = ? ORDER BY created_at DESC
+./migrations/000002_add_read_indexes.up.sql:CREATE INDEX idx_tasks_team_created_at ON tasks(team_id, created_at DESC);
+./migrations/000002_add_read_indexes.up.sql:
+./migrations/000002_add_read_indexes.up.sql:-- 5. Оптимизация аналитики GetTeamStats
+./migrations/000002_add_read_indexes.up.sql:-- Покрывает условие: status = 'done' AND updated_at >= ...
+./migrations/000002_add_read_indexes.up.sql:CREATE INDEX idx_tasks_status_updated_at ON tasks(status, updated_at);
+./migrations/000002_add_read_indexes.up.sql:
+./migrations/000002_add_read_indexes.up.sql:-- 6. Оптимизация оконной функции GetTopUsersPerTeam
+./migrations/000002_add_read_indexes.up.sql:-- Покрывает отсев старых задач до применения оконной функции: WHERE created_at >= NOW() - INTERVAL 1 MONTH
+./migrations/000002_add_read_indexes.up.sql:CREATE INDEX idx_tasks_created_at ON tasks(created_at);
+./migrations/000002_add_read_indexes.up.sql:
+./migrations/000002_add_read_indexes.up.sql:-- 7. Оптимизация получения истории задачи (избегаем filesort при ORDER BY changed_at DESC)
+./migrations/000002_add_read_indexes.up.sql:-- Индекс по task_id уже создан неявно из-за FOREIGN KEY, но композитный индекс ускорит сортировку
+./migrations/000002_add_read_indexes.up.sql:CREATE INDEX idx_task_history_task_id_changed ON task_history(task_id, changed_at DESC);
+./migrations/000002_add_read_indexes.up.sql:
+./migrations/000002_add_read_indexes.up.sql:-- 8. Оптимизация получения комментариев (избегаем filesort при ORDER BY created_at ASC)
+./migrations/000002_add_read_indexes.up.sql:CREATE INDEX idx_task_comments_task_id_created ON task_comments(task_id, created_at ASC);
+./pkg/logger/logger.go:package logger
+./pkg/logger/logger.go:
+./pkg/logger/logger.go:import (
+./pkg/logger/logger.go:	"os"
+./pkg/logger/logger.go:
+./pkg/logger/logger.go:	"go.uber.org/zap"
+./pkg/logger/logger.go:	"go.uber.org/zap/zapcore"
+./pkg/logger/logger.go:)
+./pkg/logger/logger.go:
+./pkg/logger/logger.go:// InitLogger инициализирует логгер в зависимости от окружения.
+./pkg/logger/logger.go:// env может быть "production", "development", "local" и т.д.
+./pkg/logger/logger.go:func InitLogger(env string) (*zap.Logger, error) {
+./pkg/logger/logger.go:	if env == "production" {
+./pkg/logger/logger.go:		// В проде оставляем строгий и быстрый JSON
+./pkg/logger/logger.go:		return zap.NewProduction()
+./pkg/logger/logger.go:	}
+./pkg/logger/logger.go:
+./pkg/logger/logger.go:	// Настройка для локальной разработки (красивый текст)
+./pkg/logger/logger.go:	encoderConfig := zap.NewDevelopmentEncoderConfig()
+./pkg/logger/logger.go:
+./pkg/logger/logger.go:	// Делаем уровни цветными для удобного чтения в консоли (DEBUG, WARN, ERROR)
+./pkg/logger/logger.go:	encoderConfig.EncodeLevel = zapcore.CapitalColorLevelEncoder
+./pkg/logger/logger.go:	// Человекочитаемый формат времени
+./pkg/logger/logger.go:	encoderConfig.EncodeTime = zapcore.ISO8601TimeEncoder
+./pkg/logger/logger.go:
+./pkg/logger/logger.go:	// Используем ConsoleEncoder вместо JSON
+./pkg/logger/logger.go:	encoder := zapcore.NewConsoleEncoder(encoderConfig)
+./pkg/logger/logger.go:
+./pkg/logger/logger.go:	// Настраиваем вывод в stdout с уровнем Debug
+./pkg/logger/logger.go:	core := zapcore.NewCore(
+./pkg/logger/logger.go:		encoder,
+./pkg/logger/logger.go:		zapcore.AddSync(os.Stdout),
+./pkg/logger/logger.go:		zap.DebugLevel,
+./pkg/logger/logger.go:	)
+./pkg/logger/logger.go:
+./pkg/logger/logger.go:	// Собираем логгер.
+./pkg/logger/logger.go:	// zap.AddCaller() - добавляет файл и строку (например, main.go:42).
+./pkg/logger/logger.go:	// zap.AddStacktrace(zapcore.ErrorLevel) - включает стек-трейсы ТОЛЬКО начиная с уровня Error,
+./pkg/logger/logger.go:	// спасая нас от мусора при Warning и Info.
+./pkg/logger/logger.go:	log := zap.New(core, zap.AddCaller(), zap.AddStacktrace(zapcore.ErrorLevel))
+./pkg/logger/logger.go:
+./pkg/logger/logger.go:	return log, nil
+./pkg/logger/logger.go:}

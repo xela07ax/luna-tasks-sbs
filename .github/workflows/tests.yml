@@ -1,0 +1,29 @@
+name: Luna Tasks CI
+
+on:
+  push:
+    branches: [ "main" ]
+  pull_request:
+    branches: [ "main" ]
+
+jobs:
+  test:
+    runs-on: ubuntu-latest # Выделяем бесплатный линукс-сервер от GitHub (Docker там работает нативно)
+
+    steps:
+      - name: Checkout repository
+        uses: actions/checkout@v4
+
+      - name: Set up Go
+        uses: actions/setup-go@v5
+        with:
+          go-version: '1.22' # Укажи свою версию Go
+
+      - name: Install dependencies
+        run: go mod download
+
+      - name: Run Tests with Testcontainers
+        # Здесь мы явно передаем переменную CI=true, чтобы наш "рубильник" включился!
+        env:
+          CI: "true"
+        run: go test -v -count=1 ./...
